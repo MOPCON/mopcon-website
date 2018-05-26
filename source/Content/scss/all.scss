@@ -1,0 +1,31 @@
+// *************************************
+//   Screen
+// *************************************
+/* 20180524*/
+
+// 新設定的變數在這個檔案裡面
+@import "base/variables";
+// 初始化參數
+@import "base/normalize";
+// 新設定的 mixin
+@import "mixin/mixin";
+
+// framework
+// bootstrap 的設定一樣放在原本位置，直接修改裡面的變數名稱
+// @import "vendor/bootstrap/bootstrap-sprockets";
+// @import "vendor/bootstrap/bootstrap-compass";
+// @import "vendor/bootstrap/bootstrap";
+
+// vendor
+@import "vendor/font-awesome";
+
+// 新設定的樣式
+@import "partials/header";
+@import "partials/nav";
+@import "partials/footer";
+
+
+//@import "components/bg";
+//@import "components/button";
+
+@import "page/index";

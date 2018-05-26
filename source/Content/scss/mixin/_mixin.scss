@@ -1,0 +1,10 @@
+// @mixin gg() {
+//   display: none;
+// }
+
+@mixin bg-size($bgSizeAttr) {
+	-o-background-size: $bgSizeAttr;
+	-webkit-background-size: $bgSizeAttr;
+	-moz-background-size: $bgSizeAttr;
+	background-size: $bgSizeAttr;
+}

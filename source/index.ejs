@@ -1,0 +1,50 @@
+---
+title: index
+layout: ./source/_layouts/layout.ejs
+description: MOPCON Index
+css: ['all.css']
+js: ['bootstrap.js']
+subTitle: 濁水溪以南最大的行動科技研討會
+indexList:
+ - indexListType: 最新消息
+   text: 3-4 November 2018
+ - indexListType: 最新消息
+   text: 國際會議中心 3F&4F
+
+engine: ejs
+---
+<!-- 臨時官網 -->
+<div class="wrapper">
+    <div class="comming-soon">
+      <div class="logo">
+        <img src="Content/images/logo@2x.png" alt="">
+      </div>
+      <div class="info">
+        <div class="title">
+          <div class="main-title">
+            Coming Soon...
+          </div>
+          <div class="sub-title">
+			<%= subTitle %>
+          </div>
+        </div>
+        <div class="mobile-logo">
+          <img src="Content/images/mobile-logo.png" alt="">
+        </div>
+        <div class="content">
+          <ul class="custom-list">
+			<% if(indexList.length > 0){ %>
+				<% for(var i=0; i<indexList.length; i++) {%>
+					<li>
+						<%= indexList[i].text %>
+					</li>
+				<% } %>
+			<% } else{ %>  
+				<li>目前沒有公告</li>
+			<% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end 臨時官網-->

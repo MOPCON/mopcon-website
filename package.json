@@ -1,0 +1,33 @@
+{
+  "name": "mopcon2018",
+  "description": "mopcon 2018 official website",
+  "version": "0.0.0",
+  "author": "mopcon information group",
+  "license": "MIT",
+  "email": "web@mopcon.org",
+  "private": true,
+  "scripts": {
+    "start": "npm install"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "ejs": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-ejs": "^2.2.1",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-layout": "0.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-webserver": "^0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MOPCON/mopcon-website.git"
+  },
+  "issues": {
+    "url": "https://github.com/MOPCON/mopcon-website/issues"
+  }
+}
