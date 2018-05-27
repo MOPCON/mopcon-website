@@ -16,10 +16,10 @@ module.exports = {
   paths: {
     // 來源
     'source': './source/',
-    'sass': './source/Content/scss/',
-    'img': './source/Content/images/',
+    'sass': './source/assets/scss/',
+    'img': './source/assets/images/',
     // 輸出
-    'sass_output': 'Content/css/',
+    'sass_output': 'assets/css/',
     'public': './public/'
   },
 
@@ -30,7 +30,7 @@ module.exports = {
   postcss: {
     'enabled': true, // 啟用 PostCSS
     'output_name': 'all.css', //輸出之 CSS 名稱
-    'output_folder': 'Content/css/', //最後輸出之 CSS 資料夾
+    'output_folder': 'assets/css/', //最後輸出之 CSS 資料夾
     'autoprefixer': {browsers: ['last 1 version']}
   },
   sass: {
