@@ -1,0 +1,14 @@
+    .paper {
+        border: 3px solid $primary;
+        padding: 2.5em 3em;
+
+    }
+    .paper-title {
+        .main-title {
+            color: $primary;
+            margin: 0.8em 0 0.7em;
+        }
+    }
+    .paper-content {
+        color: $white;
+    }
