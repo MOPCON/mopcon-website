@@ -14,37 +14,38 @@ indexList:
 engine: ejs
 ---
 <!-- 臨時官網 -->
-<div class="wrapper">
-    <div class="comming-soon">
-      <div class="logo">
-        <img src="assets/images/logo@2x.png" alt="">
-      </div>
-      <div class="info">
-        <div class="title">
-          <div class="main-title">
-            Coming Soon...
+<div class="container-fluid ">
+  <div class="row comming-soon mt-sm-5 mr-sm-4 ml-sm-4">
+        <div class="logo col-md-6 d-none d-md-block ">
+          <img src="assets/images/logo@2x.png" alt="">
+        </div>
+        <div class="info col-md-6">
+          <div class="title">
+            <div class="main-title">
+              Coming Soon...
+            </div>
+            <div class="sub-title">
+              <%= subTitle %>
+            </div>
           </div>
-          <div class="sub-title">
-			<%= subTitle %>
+          <div class="mobile-logo d-md-none">
+            <img class="mx-auto d-block" src="assets/images/mobile-logo.png" alt="">
           </div>
-        </div>
-        <div class="mobile-logo">
-          <img src="assets/images/mobile-logo.png" alt="">
-        </div>
-        <div class="content">
-          <ul class="custom-list">
-			<% if(indexList.length > 0){ %>
-				<% for(var i=0; i<indexList.length; i++) {%>
-					<li>
-						<%= indexList[i].text %>
-					</li>
-				<% } %>
-			<% } else{ %>  
-				<li>目前沒有公告</li>
-			<% } %>
-          </ul>
-        </div>
+          <div class="content">
+            <ul class="custom-list">
+              <% if(indexList.length > 0){ %>
+                <% for(var i=0; i<indexList.length; i++) {%>
+                  <li>
+                    <%= indexList[i].text %>
+                  </li>
+                  <% } %>
+                    <% } else{ %>
+                      <li>目前沒有公告</li>
+                      <% } %>
+            </ul>
+          </div>
       </div>
-    </div>
   </div>
+</div>
+
   <!-- end 臨時官網-->

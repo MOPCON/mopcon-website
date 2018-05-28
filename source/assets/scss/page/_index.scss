@@ -3,15 +3,21 @@ body {
     font-size: 16px !important;
     color: #666464;
     background: #010135;
-    height: 100%;
 }
 .custom-list {
 	list-style: none;
 	padding: 0;
 }
 .wrapper {
-	height: 100vh;
-	padding: 3rem 2rem;
+	// height: 100vh;
+	// padding: 3rem 2rem 0;
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 	background-image: url('../images/bg-down-right.png'), url('../images/bg-downleft.png'), url('../images/bg-upleft.png'), url('../images/bg-upright.png');
 	background-size: 50%, 10%, 15%, 15%;
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -20,19 +26,19 @@ body {
 
 .comming-soon {
 	height: 100%;
-	display: flex;
+	// display: flex;
 	font-family: 'PingFangTC', 'Microsoft JhengHei', 'sans-serif';
-	.logo {
-		width: 50vw;
-	}
+	// .logo {
+	// 	width: 50vw;
+	// }
 	
-	.mobile-logo {
-		display: none;
-	}
+	// .mobile-logo {
+	// 	display: none;
+	// }
 	
-	.info {
-		width: 50vw;
-	}
+	// .info {
+	// 	width: 50vw;
+	// }
 	
 	.title {
 		margin-top: 0;
@@ -59,12 +65,7 @@ body {
 		padding-top: 1rem;
 	}
 	
-	.content {
-		height: 50%;
-		background-image: url('../images/info-bg.png');
-		background-size: 50%;
-		background-repeat: no-repeat;
-	}
+
 	
 	.content ul {
 		width: 100%;
@@ -88,7 +89,14 @@ body {
 		margin-right: 15px;
 		font-size: 1rem;
 	}
-	
+	@media (min-width: 768px) {
+		.info {
+			background-image: url(../images/info-bg.png);
+			background-size: 50%;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+		}
+	}
 	@media (max-width: 768px) {
 		.main-title {
 			font-size: 2.5rem;
@@ -104,24 +112,24 @@ body {
 	}
 	
 	@media (max-width: 640px) {
-		.wrapper {
-			padding: 0;
-		}
+		// .wrapper {
+		// 	padding: 0;
+		// }
 		.comming-soon {
 			flex-direction: column;
 			align-items: center;
-			height: 100vh;
+			// height: 100vh;
 		}
-		.info {
-			height: 100%;
-			width: 80vw;
-		}
-		.logo {
-			display: none;
-		}
-		.mobile-logo {
-			display: block;
-		}
+		// .info {
+		// 	 height: 100%;
+		// 	 width: 80vw;
+		// }
+		// .logo {
+		// 	display: none;
+		// }
+		// .mobile-logo {
+		// 	display: block;
+		// }
 		.title {
 			margin-bottom: 0;
 		}
@@ -138,10 +146,10 @@ body {
 			margin-top: 8rem;
 		}
 		.content {
-			height: 50%;
-			display: flex;
+			// height: 50%;
+			// display: flex;
 			justify-content: center;
-			background-size: 80%;
+			// background-size: 80%;
 		}
 		.content li {
 			font-size: 1.2rem;
