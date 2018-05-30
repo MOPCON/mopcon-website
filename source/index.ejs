@@ -9,42 +9,57 @@ indexList:
  - indexListType: 最新消息
    text: 3-4 November 2018
  - indexListType: 最新消息
-   text: 國際會議中心 3F&4F
+   text: 國際會議中心(ICCK) 3F&4F
 
 engine: ejs
 ---
 <!-- 臨時官網 -->
 <div class="container-fluid ">
-  <div class="row comming-soon mt-sm-5 mr-sm-4 ml-sm-4">
-        <div class="logo col-md-6 d-none d-md-block ">
-          <img src="assets/images/logo@2x.png" alt="">
+  <div class="row coming-soon mt-sm-5 mr-sm-4 mb-4 ml-sm-4 ">
+    <div class="logo col-md-6 d-none d-md-block ">
+      <img src="assets/images/logo@2x.png" alt="">
+    </div>
+    <div class="info col-md-6">
+      <div class="title">
+        <div class="main-title">
+          Coming Soon...
         </div>
-        <div class="info col-md-6">
-          <div class="title">
-            <div class="main-title">
-              Coming Soon...
-            </div>
-            <div class="sub-title">
-              <%= subTitle %>
-            </div>
-          </div>
-          <div class="mobile-logo d-md-none">
-            <img class="mx-auto d-block" src="assets/images/mobile-logo.png" alt="">
-          </div>
-          <div class="content">
-            <ul class="custom-list">
-              <% if(indexList.length > 0){ %>
-                <% for(var i=0; i<indexList.length; i++) {%>
-                  <li>
-                    <%= indexList[i].text %>
-                  </li>
-                  <% } %>
-                    <% } else{ %>
-                      <li>目前沒有公告</li>
-                      <% } %>
-            </ul>
-          </div>
+        <div class="sub-title">
+          <%= subTitle %>
+        </div>
       </div>
+      <div class="mobile-logo d-md-none">
+        <img class="mx-auto d-block" src="assets/images/mobile-logo.png" alt="">
+      </div>
+      <div class="content mb-sm-5">
+        <ul class="custom-list">
+          <% if(indexList.length > 0){ %>
+            <% for(var i=0; i<indexList.length; i++) {%>
+              <li>
+                <%= indexList[i].text %>
+              </li>
+              <% } %>
+                <% } else{ %>
+                  <li>目前沒有公告</li>
+                  <% } %>
+        </ul>
+      </div>
+      <div class="footer mb-4">
+        <div class="btn-toolbar">
+            <a id="cfp" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://goo.gl/vqTB79">
+              徵求講者
+            </a>
+  
+            <a id="cfr" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://goo.gl/GBgWfi">
+              推薦講者
+            </a>
+  
+            <a id="cfs" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://drive.google.com/drive/folders/11-nzNgzPl1I4bf78NIHbNMieh-Pj8zRU">
+              贊助我們
+            </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
