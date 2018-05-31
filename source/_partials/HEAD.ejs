@@ -5,8 +5,10 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<% css.forEach(cssItem => { %>
+		
 	<link rel="stylesheet" type="text/css" href="assets/css/<%= cssItem %>">
 	<% }); %>
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<% js.forEach(jsItem => { %>
 	<script type="text/javascript" src="/assets/js/<%= jsItem %>"></script>
