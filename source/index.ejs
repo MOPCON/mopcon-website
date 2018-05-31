@@ -62,5 +62,19 @@ engine: ejs
     </div>
   </div>
 </div>
-
   <!-- end 臨時官網-->
+<script>
+  $(function(){
+    if(window.location.search == '?lang=zh') {
+
+    }
+    else if(window.location.search == '?lang=en') {
+      console.log("English Ver.");
+      $('.coming-soon .sub-title').text('The biggest mobile technology in southern Taiwan')
+      $('#cfp').text('Call for Presentation');
+      $('#cfr').text('Call for Recommendation');
+      $('#cfs').text('Call for Sponsor');
+      $('#COC').text('Code of Conduct');
+    }	
+  })
+</script>

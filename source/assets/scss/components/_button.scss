@@ -1,0 +1,52 @@
+.btn-primary {
+    position: relative;
+    background: $primary;
+    border: $primary;
+    overflow: hidden;
+    &::before {
+        content: "";
+        background: none;
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.btn-primary:hover {
+    background: $primary;
+    &::before {
+        animation: sheen 0.3s forwards;
+    }
+}
+
+@keyframes sheen {
+    0% {}
+    30% {
+        background: linear-gradient(  120deg,
+        transparent 45px,
+        rgba(256, 256, 256, 0.2) 45px,
+        rgba(256, 256, 256, 0.2) 60px,
+        transparent 60px,
+        transparent 100%);
+    }
+    70% {
+        background: linear-gradient( 
+            120deg,
+            transparent 45px,
+            rgba(256, 256, 256, 0.4) 45px,
+            rgba(256, 256, 256, 0.4) 60px,
+            transparent 60px,
+            transparent 100%);
+    }
+    100% {
+        background: linear-gradient(  120deg,
+        transparent 45px,
+        rgba(256, 256, 256, 0.5) 45px,
+        rgba(256, 256, 256, 0.5) 60px,
+        transparent 60px,
+        transparent 100%);
+    }
+}
