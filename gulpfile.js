@@ -69,7 +69,7 @@ gulp.task('webserver', function() {
       .pipe(webserver({
         livereload: true,
         open: true,
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 4567
         // fallback: '/Home/index.html'
       }));
