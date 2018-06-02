@@ -13,9 +13,7 @@
 }
 
 .contact {
-  display: flex;
-  justify-content: center;
-  margin: auto;
+  @include align-container(center, center);
 }
 
 .contact-btn {
@@ -27,4 +25,17 @@
   justify-content: space-evenly;
   align-items: center;
   color: $c-white;
+  background: none;
+}
+
+.footer-social {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  > div {
+    background-color: $c-light-blue;
+    width:53px;
+    height:53px;
+    border-radius:99em;
+  }
 }
