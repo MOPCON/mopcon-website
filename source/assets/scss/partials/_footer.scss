@@ -1,1 +1,41 @@
 // footer
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin: 32px auto;
+}
+
+.logo-img {
+  width: 298px;
+  height: 78px;
+  background-color: $c-white;
+}
+
+.contact {
+  @include align-container(center, center);
+}
+
+.contact-btn {
+  width: 128px;
+  height: 48px;
+  border: 2px solid $c-light-blue;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $c-white;
+  background: none;
+}
+
+.footer-social {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  > div {
+    background-color: $c-light-blue;
+    width:53px;
+    height:53px;
+    border-radius:99em;
+  }
+}

@@ -1,81 +1,137 @@
 ---
 title: index
 layout: ./source/_layouts/layout.ejs
-description: MOPCON Index
+description: MOPCON footer
 css: ['all.css']
 js: ['bootstrap.js']
-subTitle: 濁水溪以南最大的行動科技研討會
-indexList:
- - indexListType: 最新消息
-   text: 3-4 November 2018
- - indexListType: 最新消息
-   text: 國際會議中心(ICCK) 3F&4F
+socialItems:
+  - socialType: socialIcon
+    iconURL:
+  - socialType: socialIcon
+    iconURL:
+  - socialType: socialIcon
+    iconURL:
+  - socialType: socialIcon
+    iconURL:
+
+speakerData:
+  - speaker: speakerInfo
+    imgURL:
+    name: Akane Lee
+    title: 嫁給RD的UI
+  - speaker: speakerInfo
+    imgURL:
+    name: 黃敬群(jserv)
+    title: 成功大學助理教授
+  - speaker: speakerInfo
+    imgURL:
+    name: 翟本喬
+    title: 和沛移動總經理
+  - speaker: speakerInfo
+    imgURL:
+    name: 黃宇軒
+    title: 主治醫師 / 資訊工程博士候選人
+  - speaker: speakerInfo
+    imgURL:
+    name: 田哲禹 James Tien
+    title: Google Cloud 台灣區經理
+  - speaker: speakerInfo
+    imgURL:
+    name: OA
+    title: 假裝一下
+
+sponsorData:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
+  - sponsor: sponsorLogo
+    logoURL:
 
 engine: ejs
 ---
-<!-- 臨時官網 -->
-<div class="container-fluid ">
-  <div class="row coming-soon mt-sm-5 mr-sm-4 mb-4 ml-sm-4 ">
-    <div class="logo col-md-6 d-none d-md-block ">
-      <img src="assets/images/logo@2x.png" alt="">
-    </div>
-    <div class="info col-md-6">
-      <div class="title">
-        <div class="main-title">
-          Coming Soon...
-        </div>
-        <div class="sub-title">
-          <%= subTitle %>
-        </div>
-      </div>
-      <div class="mobile-logo d-md-none">
-        <img class="mx-auto d-block" src="assets/images/mobile-logo@2x.png" alt="">
-      </div>
-      <div class="content mb-sm-5">
-        <ul class="custom-list">
-          <% if(indexList.length > 0){ %>
-            <% for(var i=0; i<indexList.length; i++) {%>
-              <li>
-                <%= indexList[i].text %>
-              </li>
-              <% } %>
-                <% } else{ %>
-                  <li>目前沒有公告</li>
-                  <% } %>
-        </ul>
-      </div>
-      <div class="footer mb-4">
-        <div class="btn-toolbar pl-md-3">
-            <a id="cfp" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://goo.gl/vqTB79">
-              徵求講者
-            </a>
-  
-            <a id="cfr" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://goo.gl/GBgWfi">
-              推薦講者
-            </a>
-  
-            <a id="cfs" class="btn btn-primary btn-lg mr-4 mb-4" target="_blank" href="https://drive.google.com/drive/folders/11-nzNgzPl1I4bf78NIHbNMieh-Pj8zRU">
-              贊助我們
-            </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- end 臨時官網-->
-<script>
-  $(function(){
-    if(window.location.search == '?lang=zh') {
 
-    }
-    else if(window.location.search == '?lang=en') {
-      console.log("English Ver.");
-      $('.coming-soon .sub-title').text('The largest mobile-tech conf in Taiwan')
-      $('.custom-list li:nth-child(2)').text('International Convention Center Kaohsiung 3F&4F');
-      $('#cfp').text('Call for Presentation');
-      $('#cfr').text('Call for Recommendation');
-      $('#cfs').text('Call for Sponsorship');
-      $('#COC').text('Code of Conduct');
-    }	
-  })
-</script>
+<div>
+    <div class="speaker">
+        <div class="col-2 offset-md-5 content-title mb-lg-5">
+            講者
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide col-8 offset-md-2" data-ride="carousel">
+            <div class="carousel-inner mb-5">
+                <div class="carousel-item active">
+                    <div class="speaker-info pb-5">
+                        <% for(var i = 0; i < speakerData.length; i++) { %>
+                        <div>
+                            <div class="speaker-info img mb-4">
+                                <%= speakerData[i].imgURL %>
+                            </div>
+                            <p class="mb-3">
+                                <%= speakerData[i].name %>
+                            </p>
+                            <p>
+                                <%= speakerData[i].title %>
+                            </p>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#" data-slide-to="0" class="active"></li>
+                    <li data-target="#" data-slide-to="1"></li>
+                    <li data-target="#" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2 offset-md-5 content-title mb-lg-5">
+        贊助廠商
+    </div>
+    <div class="sponsor">
+        <div id="carouselExampleIndicators" class="carousel slide col-8 offset-md-2" data-ride="carousel">
+            <div class="carousel-inner mb-5">
+                <div class="carousel-item active">
+                    <div class="sponsor-info pb-lg-5">
+                        <% for(var i = 0; i < sponsorData.length; i++) { %>
+                        <div class="mx-lg-5 my-lg-4">
+                            <div class="sponsor-info img">
+                                <%= sponsorData[i].logoURL %>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#" data-slide-to="0" class="active"></li>
+                    <li data-target="#" data-slide-to="1"></li>
+                    <li data-target="#" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <%- include ./_partials/footer %>
+    <div class="col-2 offset-md-5 mb-lg-5">
+        <div class="footer-social">
+            <% for(var i = 0; i < socialItems.length; i++) { %>
+            <div>
+                <%= socialItems[i].iconURL %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>

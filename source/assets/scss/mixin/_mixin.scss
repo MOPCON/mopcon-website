@@ -8,3 +8,9 @@
 	-moz-background-size: $bgSizeAttr;
 	background-size: $bgSizeAttr;
 }
+
+@mixin align-container($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
