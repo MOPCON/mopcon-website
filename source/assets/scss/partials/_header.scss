@@ -43,17 +43,13 @@
 }
 
 .ticket-btn {
-  padding: 0;
-  margin: auto;
-  > button {
-    border: 2px solid $c-light-blue;
-    border-radius: 2px;
-    width: 96px;
-    height: 36px;
-    background-color: $c-light-blue;
-    color: $c-white;
-    font-size: 0.9rem;
-  }
+  border: 2px solid $c-light-blue;
+  border-radius: 2px;
+  width: 96px;
+  height: 36px;
+  background-color: $c-light-blue;
+  color: $c-white;
+  font-size: 0.9rem;
 }
 
 .arrow {
