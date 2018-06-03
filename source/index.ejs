@@ -6,61 +6,61 @@ css: ['all.css']
 js: ['bootstrap.js']
 socialItems:
   - socialType: socialIcon
-    iconURL:
+    iconURL: './assets/images/social/fb.svg'
   - socialType: socialIcon
-    iconURL:
+    iconURL: './assets/images/social/fb.svg'
   - socialType: socialIcon
-    iconURL:
+    iconURL: './assets/images/social/fb.svg'
   - socialType: socialIcon
-    iconURL:
+    iconURL: './assets/images/social/fb.svg'
 
 speakerData:
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/akanelee.jpg'
     name: Akane Lee
     title: 嫁給RD的UI
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/benjai.jpg'
     name: 黃敬群(jserv)
     title: 成功大學助理教授
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/jservhuang.jpg'
     name: 翟本喬
     title: 和沛移動總經理
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/yushhuang.jpg'
     name: 黃宇軒
     title: 主治醫師 / 資訊工程博士候選人
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/jamestien.jpg'
     name: 田哲禹 James Tien
     title: Google Cloud 台灣區經理
   - speaker: speakerInfo
-    imgURL:
+    imgURL: './assets/images/speakers/oawu.jpg'
     name: OA
-    title: 假裝一下
+    title: 我是 OA，是一名網頁工程師
 
 sponsorData:
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/AWS.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/Dcard.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/kkbox.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/OathYahoo.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/PuloApp.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/Pumo.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/Webduino.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/tkbeer.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/GoogleCloud.png'
   - sponsor: sponsorLogo
-    logoURL:
+    logoURL: './assets/images/sponsors/AWS.png'
 
 engine: ejs
 ---
@@ -72,15 +72,13 @@ engine: ejs
                 講者
             </div>
         </div>
-            <div id="carouselExampleIndicators" class="carousel slide col-8 offset-sm-2" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide col-sm-8 offset-sm-2" data-ride="carousel">
                 <div class="carousel-inner mb-5">
                     <div class="carousel-item active">
-                        <div class="speaker-info col-sm-6 pb-lg-5">
+                        <div class="speaker-info pb-lg-5 flex-wrap justify-content-center">
                             <% for(var i = 0; i < speakerData.length; i++) { %>
-                            <div class="mx-lg-5 my-lg-4">
-                                <div class="speaker-info img">
-                                    <%= speakerData[i].imgURL %>
-                                </div>
+                            <div class="mx-lg-3 my-lg">
+                                <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
                                 <p class="mb-3">
                                     <%= speakerData[i].name %>
                                 </p>
@@ -111,9 +109,7 @@ engine: ejs
                     <div class="sponsor-info pb-lg-5">
                         <% for(var i = 0; i < sponsorData.length; i++) { %>
                         <div class="mx-lg-5 my-lg-4">
-                            <div class="sponsor-info img">
-                                <%= sponsorData[i].logoURL %>
-                            </div>
+                            <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
                         </div>
                         <% } %>
                     </div>
@@ -128,11 +124,11 @@ engine: ejs
     </div>
 
     <%- include ./_partials/footer %>
-    <div class="col-2 offset-md-5 mb-lg-5">
+    <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
         <div class="footer-social">
             <% for(var i = 0; i < socialItems.length; i++) { %>
             <div>
-                <%= socialItems[i].iconURL %>
+                <img src="<%= socialItems[i].iconURL %>">
             </div>
             <% } %>
         </div>
