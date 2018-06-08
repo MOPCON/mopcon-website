@@ -3,7 +3,7 @@ title: index
 layout: ./source/_layouts/layout.ejs
 description: MOPCON footer
 css: ['all.css']
-js: ['bootstrap.js']
+js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js]
 socialItems:
   - socialType: socialIcon
     iconURL: './assets/images/social/fb.svg'
@@ -65,72 +65,134 @@ sponsorData:
 engine: ejs
 ---
 
-<div>
-    <div class="speaker">
+<div class="panel bottom">
+    <div class="speaker" >
         <div class="row">
             <div class="col-md-2 offset-md-5 content-title mb-lg-5">
                 講者
             </div>
         </div>
-            <div id="carouselExampleIndicators" class="carousel slide col-sm-8 offset-sm-2" data-ride="carousel">
-                <div class="carousel-inner mb-5">
-                    <div class="carousel-item active">
-                        <div class="speaker-info pb-lg-5 flex-wrap justify-content-center">
-                            <% for(var i = 0; i < speakerData.length; i++) { %>
-                            <div class="mx-lg-3 my-lg">
-                                <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
-                                <p class="mb-3">
-                                    <%= speakerData[i].name %>
-                                </p>
-                                <p>
-                                    <%= speakerData[i].title %>
-                                </p>
+            <div id="carouselSpeaker" class="carousel slide pb-lg-5" data-ride="carousel">
+                <ol class="carousel-indicators my-0">
+                    <li data-target="#carouselSpeaker" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselSpeaker" data-slide-to="1"></li>
+                    <li data-target="#carouselSpeaker" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item  active">
+                        <div class="d-flex justify-content-center">
+                            <div class="speaker-info">
+                                <% for(var i = 0; i < speakerData.length; i++) { %>
+                                    <div class="mx-4">
+                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
+                                        <p class="">
+                                            <%= speakerData[i].name %>
+                                        </p>
+                                        <p>
+                                            <%= speakerData[i].title %>
+                                        </p>
+                                    </div>
+                                    <% } %>
                             </div>
-                            <% } %>
                         </div>
                     </div>
-                    <ol class="carousel-indicators">
-                        <li data-target="#" data-slide-to="0" class="active"></li>
-                        <li data-target="#" data-slide-to="1"></li>
-                        <li data-target="#" data-slide-to="2"></li>
-                    </ol>
+                    <div class="carousel-item ">
+                        <div class="d-flex justify-content-center">
+                            <div class="speaker-info">
+                                <% for(var i = 0; i < speakerData.length; i++) { %>
+                                    <div class="mx-4">
+                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
+                                        <p class="">
+                                            <%= speakerData[i].name %>
+                                        </p>
+                                        <p>
+                                            <%= speakerData[i].title %>
+                                        </p>
+                                    </div>
+                                    <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="d-flex justify-content-center">
+                            <div class="speaker-info">
+                                <% for(var i = 0; i < speakerData.length; i++) { %>
+                                    <div class="mx-4">
+                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
+                                        <p class="">
+                                            <%= speakerData[i].name %>
+                                        </p>
+                                        <p>
+                                            <%= speakerData[i].title %>
+                                        </p>
+                                    </div>
+                                    <% } %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
     </div>
-    <div class="sponsor">
+    <div class="sponsor mt-5">
         <div class="row">
             <div class="col-md-4 offset-md-4 content-title mb-lg-5">
                 贊助廠商
             </div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide col-8 offset-md-2" data-ride="carousel">
-            <div class="carousel-inner mb-5">
-                <div class="carousel-item active">
-                    <div class="sponsor-info pb-lg-5">
-                        <% for(var i = 0; i < sponsorData.length; i++) { %>
-                        <div class="mx-lg-5 my-lg-4">
-                            <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
+        <div id="carouselSponsor" class="carousel slide pb-lg-5" data-ride="carousel">
+            <ol class="carousel-indicators my-0">
+                <li data-target="#carouselSponsor" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselSponsor" data-slide-to="1"></li>
+                <li data-target="#carouselSponsor" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item  active">
+                    <div class="d-flex justify-content-center">
+                        <div class="sponsor-info">
+                            <% for(var i = 0; i < sponsorData.length; i++) { %>
+                                <div class="mx-lg-5 my-lg-4">
+                                    <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
+                                </div>
+                                <% } %>
                         </div>
-                        <% } %>
                     </div>
                 </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#" data-slide-to="0" class="active"></li>
-                    <li data-target="#" data-slide-to="1"></li>
-                    <li data-target="#" data-slide-to="2"></li>
-                </ol>
+            <div class="carousel-item ">
+                <div class="d-flex justify-content-center">
+                    <div class="sponsor-info">
+                        <% for(var i = 0; i < sponsorData.length; i++) { %>
+                            <div class="mx-lg-5 my-lg-4">
+                                <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center">
+                        <div class="sponsor-info">
+                            <% for(var i = 0; i < sponsorData.length; i++) { %>
+                                <div class="mx-lg-5 my-lg-4">
+                                    <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <%- include ./_partials/footer %>
-    <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-2 offset-lg-5">
-        <div class="footer-social">
-            <% for(var i = 0; i < socialItems.length; i++) { %>
-            <div>
-                <img src="<%= socialItems[i].iconURL %>">
+    <div class="row d-flex justify-content-center mb-4">
+        <div class="col-3">
+            <div class="footer-social">
+                <% for(var i = 0; i < socialItems.length; i++) { %>
+                    <div>
+                        <img src="<%= socialItems[i].iconURL %>">
+                    </div>
+                    <% } %>
             </div>
-            <% } %>
         </div>
     </div>
 </div>

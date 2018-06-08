@@ -7,9 +7,7 @@
 }
 
 .logo-img {
-  width: 298px;
-  height: 78px;
-  background-color: $c-white;
+  width: 100%;
 }
 
 .contact {
@@ -31,12 +29,13 @@
 .footer-social {
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   > div {
     background-color: $c-light-blue;
     width: 53px;
     height: 53px;
     border-radius: 99em;
+    margin: .5rem;
   }
   img {
     width: 100%;
