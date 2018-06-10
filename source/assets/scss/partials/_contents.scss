@@ -7,23 +7,17 @@
 }
 
 .speaker-info {
-  display: flex;
-  justify-content: space-between;
-  > div {
-    width: 130px;
-  }
-  .img {
-    width: 130px;
-    height: 130px;
-    border-radius: 99em;
-  }
-  p {
+  h2 {
     color: $c-white;
     font-size: 1rem;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
   }
+}
+
+.speaker-img {
+  border-radius: 99em;
 }
 
 .speaker-carousel {
@@ -49,4 +43,31 @@
   width: .75rem;
   height: .75rem;
   border-radius: 99em;
+}
+
+.owl-dots {
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  display: inline-flex;
+  zoom: 1;
+}
+
+.owl-dots .owl-dot {
+  outline:none;
+  span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: none;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border: 2px solid $c-white;
+    border-radius: 30px;
+  }
+}
+
+.owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+  background: $c-white;
 }

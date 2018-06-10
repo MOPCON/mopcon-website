@@ -17,6 +17,7 @@ module.exports = {
     // 來源
     'source': './source/',
     'sass': './source/assets/scss/',
+    'css': './source/assets/css/',
     'img': './source/assets/images/',
     // 輸出
     'sass_output': 'assets/css/',

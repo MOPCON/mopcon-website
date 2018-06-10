@@ -17,7 +17,7 @@ gulp.task('sass', function() {
    var processors = [
     autoprefixer(config.postcss.autoprefixer),
   ];
-  gulp.src([config.paths.sass + '**/**.scss'])
+  gulp.src([config.paths.sass + '**/**.scss', config.paths.css + '**/**.css'])
     .pipe(plumber())
     .pipe(sass({outputStyle: config.sass.output_style})
     .on('error', sass.logError))

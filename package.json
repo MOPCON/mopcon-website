@@ -30,5 +30,6 @@
   },
   "issues": {
     "url": "https://github.com/MOPCON/mopcon-website/issues"
-  }
+  },
+  "dependencies": {}
 }

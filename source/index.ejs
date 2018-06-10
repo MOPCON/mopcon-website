@@ -2,17 +2,17 @@
 title: index
 layout: ./source/_layouts/layout.ejs
 description: MOPCON footer
-css: ['all.css']
-js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js]
+css: ['all.css', 'owl.carousel.min.css']
+js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
 socialItems:
   - socialType: socialIcon
     iconURL: './assets/images/social/fb.svg'
   - socialType: socialIcon
-    iconURL: './assets/images/social/fb.svg'
+    iconURL: './assets/images/social/flickr-logo-of-two-dots.svg'
   - socialType: socialIcon
-    iconURL: './assets/images/social/fb.svg'
+    iconURL: './assets/images/social/google-plus.svg'
   - socialType: socialIcon
-    iconURL: './assets/images/social/fb.svg'
+    iconURL: './assets/images/social/twitter-logo-silhouette.svg'
 
 speakerData:
   - speaker: speakerInfo
@@ -21,12 +21,12 @@ speakerData:
     title: 嫁給RD的UI
   - speaker: speakerInfo
     imgURL: './assets/images/speakers/benjai.jpg'
-    name: 黃敬群(jserv)
-    title: 成功大學助理教授
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/jservhuang.jpg'
     name: 翟本喬
     title: 和沛移動總經理
+  - speaker: speakerInfo
+    imgURL: './assets/images/speakers/jservhuang.jpg'
+    name: 黃敬群(jserv)
+    title: 成功大學助理教授
   - speaker: speakerInfo
     imgURL: './assets/images/speakers/yushhuang.jpg'
     name: 黃宇軒
@@ -72,66 +72,81 @@ engine: ejs
                 講者
             </div>
         </div>
-            <div id="carouselSpeaker" class="carousel slide pb-lg-5" data-ride="carousel">
-                <ol class="carousel-indicators my-0">
-                    <li data-target="#carouselSpeaker" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselSpeaker" data-slide-to="1"></li>
-                    <li data-target="#carouselSpeaker" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item  active">
-                        <div class="d-flex justify-content-center">
-                            <div class="speaker-info">
-                                <% for(var i = 0; i < speakerData.length; i++) { %>
-                                    <div class="mx-4">
-                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
-                                        <p class="">
-                                            <%= speakerData[i].name %>
-                                        </p>
-                                        <p>
-                                            <%= speakerData[i].title %>
-                                        </p>
-                                    </div>
-                                    <% } %>
-                            </div>
-                        </div>
+        <div class="row justify-content-center">
+            <div class="owl-carousel speaker-carousel col-8">
+                    <% for(var i = 0; i < speakerData.length; i++) { %>
+                    <div class="speaker-info item">
+                        <img class="speaker-img w-75 h-75 m-auto" src="<%= speakerData[i].imgURL %>">
+                        <h2 class="mt-4">
+                        <%= speakerData[i].name %>
+                        </h2>
+                        <h2>
+                         <%= speakerData[i].title %>
+                        </h2>
                     </div>
-                    <div class="carousel-item ">
-                        <div class="d-flex justify-content-center">
-                            <div class="speaker-info">
-                                <% for(var i = 0; i < speakerData.length; i++) { %>
-                                    <div class="mx-4">
-                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
-                                        <p class="">
-                                            <%= speakerData[i].name %>
-                                        </p>
-                                        <p>
-                                            <%= speakerData[i].title %>
-                                        </p>
-                                    </div>
-                                    <% } %>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="d-flex justify-content-center">
-                            <div class="speaker-info">
-                                <% for(var i = 0; i < speakerData.length; i++) { %>
-                                    <div class="mx-4">
-                                        <img class="speaker-info img" src="<%= speakerData[i].imgURL %>">
-                                        <p class="">
-                                            <%= speakerData[i].name %>
-                                        </p>
-                                        <p>
-                                            <%= speakerData[i].title %>
-                                        </p>
-                                    </div>
-                                    <% } %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <% } %>
             </div>
+        </div>
+            <!--<div id="carouselSpeaker" class="owl-carousel pb-lg-5" data-ride="carousel">-->
+                <!--<ol class="carousel-indicators my-0">-->
+                    <!--<li data-target="#carouselSpeaker" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#carouselSpeaker" data-slide-to="1"></li>-->
+                    <!--<li data-target="#carouselSpeaker" data-slide-to="2"></li>-->
+                <!--</ol>-->
+                <!--<div class="carousel-inner">-->
+                    <!--<div class="carousel-item  active">-->
+                        <!--<div class="d-flex justify-content-center">-->
+                            <!--<div class="speaker-info item">-->
+                                <!--<% for(var i = 0; i < speakerData.length; i++) { %>-->
+                                    <!--<div class="mx-4">-->
+                                        <!--<img class="speaker-info img" src="<%= speakerData[i].imgURL %>">-->
+                                        <!--<p class="">-->
+                                            <!--<%= speakerData[i].name %>-->
+                                        <!--</p>-->
+                                        <!--<p>-->
+                                            <!--<%= speakerData[i].title %>-->
+                                        <!--</p>-->
+                                    <!--</div>-->
+                                    <!--<% } %>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="carousel-item ">-->
+                        <!--<div class="d-flex justify-content-center">-->
+                            <!--<div class="speaker-info">-->
+                                <!--<% for(var i = 0; i < speakerData.length; i++) { %>-->
+                                    <!--<div class="mx-4">-->
+                                        <!--<img class="speaker-info img" src="<%= speakerData[i].imgURL %>">-->
+                                        <!--<p class="">-->
+                                            <!--<%= speakerData[i].name %>-->
+                                        <!--</p>-->
+                                        <!--<p>-->
+                                            <!--<%= speakerData[i].title %>-->
+                                        <!--</p>-->
+                                    <!--</div>-->
+                                    <!--<% } %>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="carousel-item ">-->
+                        <!--<div class="d-flex justify-content-center">-->
+                            <!--<div class="speaker-info">-->
+                                <!--<% for(var i = 0; i < speakerData.length; i++) { %>-->
+                                    <!--<div class="mx-4">-->
+                                        <!--<img class="speaker-info img" src="<%= speakerData[i].imgURL %>">-->
+                                        <!--<p class="">-->
+                                            <!--<%= speakerData[i].name %>-->
+                                        <!--</p>-->
+                                        <!--<p>-->
+                                            <!--<%= speakerData[i].title %>-->
+                                        <!--</p>-->
+                                    <!--</div>-->
+                                    <!--<% } %>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
     </div>
     <div class="sponsor mt-5">
         <div class="row">
@@ -157,7 +172,7 @@ engine: ejs
                         </div>
                     </div>
                 </div>
-            <div class="carousel-item ">
+            <div class="carousel-item">
                 <div class="d-flex justify-content-center">
                     <div class="sponsor-info">
                         <% for(var i = 0; i < sponsorData.length; i++) { %>
@@ -185,7 +200,7 @@ engine: ejs
 
     <%- include ./_partials/footer %>
     <div class="row d-flex justify-content-center mb-4">
-        <div class="col-3">
+        <div class="col-8 col-sm-6">
             <div class="footer-social">
                 <% for(var i = 0; i < socialItems.length; i++) { %>
                     <div>
