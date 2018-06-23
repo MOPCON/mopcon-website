@@ -1,0 +1,81 @@
+---
+title: Code Of Conduct
+layout: ./source/_layouts/pageLayout.ejs
+css: ['all.css']
+js: ['bootstrap.js']
+socialItems:
+  - socialType: socialIcon
+    iconURL: './assets/images/social/fb.svg'
+  - socialType: socialIcon
+    iconURL: './assets/images/social/flickr-logo-of-two-dots.svg'
+  - socialType: socialIcon
+    iconURL: './assets/images/social/google-plus.svg'
+  - socialType: socialIcon
+    iconURL: './assets/images/social/twitter-logo-silhouette.svg'
+engine: ejs
+---
+<div class="schedule d-flex flex-column align-items-center">
+    <h2>SCHEDULE</h2>
+    <span class="date d-flex justify-content-center">
+        <button type="button">11/03</button>
+        <button type="button" class="active">11/04</button>
+    </span>
+    <h5>點擊議程標題可觀看詳細介紹</h5>
+    <div class="container">
+        <div class="row title">
+            <div class="col-lg-3">11/3</div>
+            <div class="col-lg-3">R1(3F一廳)</div>
+            <div class="col-lg-3">R1(3F一廳)</div>
+            <div class="col-lg-3">R1(3F一廳)</div>
+        </div>
+        <div class="row speechTalk item">
+            <div class="col-lg-3 speechTime">11/3</div>
+            <div class="col-lg-3 speechContent">
+                <div class="tag">
+                    <span>VR</span>
+                </div>
+                <div class="speaker">黃宇軒</div>
+                <p class="detail">一星期、一個月、一年 ，擴增實境手術訓練系 統的開發之路</p>
+
+            </div>
+            <div class="col-lg-3 speechContent">
+                <div class="tag">
+                    <span>VR</span>
+                </div>
+                <div class="speaker">黃宇軒</div>
+                <p class="detail">一星期、一個月、一年 ，擴增實境手術訓練系 統的開發之路</p>
+            </div>
+            <div class="col-lg-3 speechContent">
+                <div  class="tag">
+                    <span>VR</span>
+                </div>
+                <div class="speaker">黃宇軒</div>
+                <p class="detail">一星期、一個月、一年 ，擴增實境手術訓練系 統的開發之路</p>
+                <div class="serviceTag">
+                    <span>Slide</span>
+                </div>
+            </div>
+        </div>
+        <div class="row break item">
+            <div class="col-lg-3">11/3</div>
+            <div class="col-lg-9">休息 Break</div>
+        </div>
+        <div class="row speechTalk item">
+            <div class="col-lg-3">11/3</div>
+            <div class="col-lg-9">Sponsor Talk</div>
+        </div>
+    </div>
+</div>
+
+<%- include ./_partials/footer %>
+    <div class="row d-flex justify-content-center mb-4">
+        <div class="col-8 col-sm-6">
+            <div class="footer-social">
+                <% for(var i = 0; i < socialItems.length; i++) { %>
+                    <div>
+                        <img src="<%= socialItems[i].iconURL %>">
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
