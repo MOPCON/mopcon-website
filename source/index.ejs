@@ -95,35 +95,8 @@ engine: ejs
             </div>
         </div>
         <div id="carouselSponsor" class="carousel slide pb-lg-5" data-ride="carousel">
-            <ol class="carousel-indicators my-0">
-                <li data-target="#carouselSponsor" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselSponsor" data-slide-to="1"></li>
-                <li data-target="#carouselSponsor" data-slide-to="2"></li>
-            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item  active">
-                    <div class="d-flex justify-content-center">
-                        <div class="sponsor-info">
-                            <% for(var i = 0; i < sponsorData.length; i++) { %>
-                                <div class="mx-lg-5 my-lg-4">
-                                    <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
-                                </div>
-                                <% } %>
-                        </div>
-                    </div>
-                </div>
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="sponsor-info">
-                        <% for(var i = 0; i < sponsorData.length; i++) { %>
-                            <div class="mx-lg-5 my-lg-4">
-                                <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
-                            </div>
-                            <% } %>
-                    </div>
-                </div>
-            </div>
-                <div class="carousel-item ">
                     <div class="d-flex justify-content-center">
                         <div class="sponsor-info">
                             <% for(var i = 0; i < sponsorData.length; i++) { %>
@@ -140,7 +113,7 @@ engine: ejs
 
     <%- include ./_partials/footer %>
     <div class="row d-flex justify-content-center mb-4">
-        <div class="col-8 col-sm-6">
+        <div class="col-lg-8 col-sm-12  ">
             <div class="footer-social">
                 <% for(var i = 0; i < socialItems.length; i++) { %>
                     <div>

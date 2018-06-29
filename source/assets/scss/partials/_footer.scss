@@ -43,3 +43,13 @@
     padding: .5rem;
   }
 }
+
+@media screen and (max-width: 320px){
+   
+  .footer-social {
+  > div {
+    margin: .3rem;
+  }
+}
+
+}
