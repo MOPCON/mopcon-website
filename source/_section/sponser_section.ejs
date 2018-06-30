@@ -1,0 +1,41 @@
+<% var sponsorData = [{'logoURL': './assets/images/sponsors/AWS.png'},
+   
+{'logoURL': './assets/images/sponsors/Dcard.png'},
+
+{'logoURL': './assets/images/sponsors/kkbox.png'},
+
+{'logoURL': './assets/images/sponsors/OathYahoo.png'},
+
+{'logoURL': './assets/images/sponsors/PuloApp.png'},
+
+{'logoURL': './assets/images/sponsors/Pumo.png'},
+
+{'logoURL': './assets/images/sponsors/Webduino.png'},
+
+{'logoURL': './assets/images/sponsors/tkbeer.png'},
+
+{'logoURL': './assets/images/sponsors/GoogleCloud.png'},
+
+{'logoURL': './assets/images/sponsors/AWS.png'}]; %>
+<div class="sponsor mt-5">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 content-title mb-lg-5">
+            贊助廠商
+        </div>
+    </div>
+    <div id="carouselSponsor" class="carousel slide pb-lg-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item  active">
+                <div class="d-flex justify-content-center">
+                    <div class="sponsor-info">
+                        <% for(var i = 0; i < sponsorData.length; i++) { %>
+                            <div class="mx-lg-5 my-lg-4">
+                                <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

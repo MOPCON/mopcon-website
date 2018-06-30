@@ -14,102 +14,15 @@ socialItems:
   - socialType: socialIcon
     iconURL: './assets/images/social/twitter-logo-silhouette.svg'
 
-speakerData:
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/akanelee.jpg'
-    name: Akane Lee
-    title: 嫁給RD的UI
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/benjai.jpg'
-    name: 翟本喬
-    title: 和沛移動總經理
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/jservhuang.jpg'
-    name: 黃敬群(jserv)
-    title: 成功大學助理教授
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/yushhuang.jpg'
-    name: 黃宇軒
-    title: 主治醫師 / 資訊工程博士候選人
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/jamestien.jpg'
-    name: 田哲禹 James Tien
-    title: Google Cloud 台灣區經理
-  - speaker: speakerInfo
-    imgURL: './assets/images/speakers/oawu.jpg'
-    name: OA
-    title: 我是 OA，是一名網頁工程師
 
-sponsorData:
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/AWS.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/Dcard.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/kkbox.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/OathYahoo.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/PuloApp.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/Pumo.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/Webduino.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/tkbeer.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/GoogleCloud.png'
-  - sponsor: sponsorLogo
-    logoURL: './assets/images/sponsors/AWS.png'
 
 engine: ejs
 ---
 
 <div class="panel bottom">
-    <div class="speaker" >
-        <div class="row">
-            <div class="col-md-2 offset-md-5 content-title mb-lg-5">
-                講者
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="owl-carousel speaker-carousel col-8">
-                    <% for(var i = 0; i < speakerData.length; i++) { %>
-                    <div class="speaker-info item">
-                        <img class="speaker-img w-75 h-75 m-auto" src="<%= speakerData[i].imgURL %>">
-                        <h2 class="mt-4">
-                        <%= speakerData[i].name %>
-                        </h2>
-                        <h2>
-                         <%= speakerData[i].title %>
-                        </h2>
-                    </div>
-                    <% } %>
-            </div>
-        </div>
-    </div>
-    <div class="sponsor mt-5">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 content-title mb-lg-5">
-                贊助廠商
-            </div>
-        </div>
-        <div id="carouselSponsor" class="carousel slide pb-lg-5" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item  active">
-                    <div class="d-flex justify-content-center">
-                        <div class="sponsor-info">
-                            <% for(var i = 0; i < sponsorData.length; i++) { %>
-                                <div class="mx-lg-5 my-lg-4">
-                                    <img class="sponsor-info img" src="<%= sponsorData[i].logoURL %>">
-                                </div>
-                                <% } %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%#- include ./_section/speaker_section %>
+    
+    <%#- include ./_section/sponser_section %>
 
     <%- include ./_partials/footer %>
     <div class="row d-flex justify-content-center mb-4">
