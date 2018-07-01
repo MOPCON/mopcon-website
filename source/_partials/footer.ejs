@@ -1,3 +1,10 @@
+<% var socialItems = [
+  {iconURL: './assets/images/social/fb.svg'},
+  {iconURL: './assets/images/social/flickr-logo-of-two-dots.svg'},
+  {iconURL: './assets/images/social/google-plus.svg'},
+  {iconURL: './assets/images/social/twitter-logo-silhouette.svg'}
+]; %>
+  
 <footer class="footer">
     <div class="container">
         <div class="col-lg-4 footer-logo">
@@ -12,3 +19,14 @@
         </div>
     </div>
 </footer>
+<div class="row d-flex justify-content-center mb-4">
+        <div class="col-lg-8 col-sm-12  ">
+            <div class="footer-social">
+                <% for(var i = 0; i < socialItems.length; i++) { %>
+                    <div>
+                        <img src="<%= socialItems[i].iconURL %>">
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>

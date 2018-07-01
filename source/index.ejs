@@ -4,36 +4,19 @@ layout: ./source/_layouts/layout.ejs
 description: MOPCON footer
 css: ['all.css', 'owl.carousel.min.css']
 js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
-socialItems:
-  - socialType: socialIcon
-    iconURL: './assets/images/social/fb.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/flickr-logo-of-two-dots.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/google-plus.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/twitter-logo-silhouette.svg'
-
-
 
 engine: ejs
 ---
 
-<div class="panel bottom">
-    <%#- include ./_section/speaker_section %>
-    
-    <%#- include ./_section/sponser_section %>
-
-    <%- include ./_partials/footer %>
-    <div class="row d-flex justify-content-center mb-4">
-        <div class="col-lg-8 col-sm-12  ">
-            <div class="footer-social">
-                <% for(var i = 0; i < socialItems.length; i++) { %>
-                    <div>
-                        <img src="<%= socialItems[i].iconURL %>">
-                    </div>
-                    <% } %>
-            </div>
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <button type="button" class="btn btn-primary btn-lg">贊助我們</button>
         </div>
     </div>
-</div>
+    <%- include ./_section/video_section %>
+
+    <%#- include ./_section/speaker_section %>
+
+    <%#- include ./_section/sponser_section %>
+
+   

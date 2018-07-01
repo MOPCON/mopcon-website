@@ -3,15 +3,7 @@ title: Code Of Conduct
 layout: ./source/_layouts/pageLayout.ejs
 css: ['all.css']
 js: ['bootstrap.js']
-socialItems:
-  - socialType: socialIcon
-    iconURL: './assets/images/social/fb.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/flickr-logo-of-two-dots.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/google-plus.svg'
-  - socialType: socialIcon
-    iconURL: './assets/images/social/twitter-logo-silhouette.svg'
+
 engine: ejs
 ---
 <div class="schedule d-flex flex-column align-items-center">
@@ -67,15 +59,3 @@ engine: ejs
     </div>
 </div>
 
-<%- include ./_partials/footer %>
-    <div class="row d-flex justify-content-center mb-4">
-        <div class="col-8 col-sm-6">
-            <div class="footer-social">
-                <% for(var i = 0; i < socialItems.length; i++) { %>
-                    <div>
-                        <img src="<%= socialItems[i].iconURL %>">
-                    </div>
-                    <% } %>
-            </div>
-        </div>
-    </div>
