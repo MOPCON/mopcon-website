@@ -11,31 +11,36 @@
         margin-bottom: 2rem;
     }
     .date{
-    width: 12rem;
-    button {
-        width: 10rem;
-        color:$c-white;
-        background-color: transparent;
-    }
-    button:nth-child(1){
-        border:1px solid $c-light-blue;
-        border-radius:10px 0px 0px 10px; 
-    }
-    button:nth-child(2){
-        border:1px solid $c-light-blue;
-        border-radius:0px 10px 10px 0; 
-    }
-    button.active{
-        background-color: $c-light-blue;
-        color:$c-white;
-    }
+        width: 12rem;
+        button {
+            width: 10rem;
+            color:$c-white;
+            background-color: transparent;
+        }
+        button:nth-child(1){
+            border:1px solid $c-light-blue;
+            border-radius:10px 0px 0px 10px; 
+        }
+        button:nth-child(2){
+            border:1px solid $c-light-blue;
+            border-radius:0px 10px 10px 0; 
+        }
+        button.active{
+            background-color: $c-light-blue;
+            color:$c-white;
+        }
     }
     .container{
-        width: 44rem;
         text-align: center;
     }
     .container.day02{
         display: none;
+    }
+    .container{
+        .list{
+            max-width: 44rem;
+            
+        }
     }
     .title{
         // width: 44rem;
@@ -85,5 +90,15 @@
         padding: 2px 4px;
         font-size: 12px;
         border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .schedule{
+        .container {
+            .list {
+                width: 90%;
+            }
+        }
     }
 }
