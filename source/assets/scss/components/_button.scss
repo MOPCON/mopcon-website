@@ -1,7 +1,7 @@
 .btn-primary {
     position: relative;
-    background: $primary;
-    border: $primary;
+    background: $c-light-blue;
+    border: $c-light-blue;
     overflow: hidden;
     &::before {
         content: "";
@@ -16,7 +16,7 @@
 }
 
 .btn-primary:hover {
-    background: $primary;
+    background: $c-light-blue;
     &::before {
         animation: sheen 0.3s forwards;
     }
