@@ -1,58 +1,83 @@
-	<meta charset="UTF-8">
-	<title>
-		<%= title %>
-	</title>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
-	<% css.forEach(cssItem => { %>
+<meta charset="UTF-8">
+<title>
+    <%= title %>
+</title>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+<% css.forEach(cssItem => { %>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/<%= cssItem %>">
-	<% }); %>
-	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<!--<script>
-		$(function () {
-			$.scrollify({
-				section: ".panel",
-				//sectionName:false,
-				scrollSpeed: 1100,
-				overflowScroll: true,
-			});
+<link rel="stylesheet" type="text/css" href="assets/css/<%= cssItem %>">
+<% }); %>
+<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugin/TimeCircles.js"></script>
+<script type="text/javascript" src="../assets/js/plugin/jquery.countdown360.min.js"></script>
+<script>
+    $(function () {
+        $.scrollify({
+            section: ".panel",
+            //sectionName:false,
+            scrollSpeed: 1100,
+            overflowScroll: true,
+        });
 
-			$(".arrow-go").click(function (e) {
-				e.preventDefault();
-				$.scrollify.next();
+        $(".arrow-go").click(function (e) {
+            e.preventDefault();
+            $.scrollify.next();
+        });
 
-			});
+        $(".example").TimeCircles({
+            start: true,
+            animation_interval: "ticks",
+            direction: "Counter-clockwise",
+            number_size: 0.32,
+            // bg_width: 2,
+            // fg_width: 0.05,
+            circle_bg_color: "#FFFFFF",
+            time: {
+                Days: { color: "#010135" },
+                Hours: { color: "#010135" },
+                Minutes: { color: "#010135" },
+                Seconds: { show: false }
+            }
+        });
 
-            $('.speaker-carousel').owlCarousel({
-                loop: true,
-                autoplay: true,
-                margin: 10,
-                responsiveClass: true,
-                autoplayHoverPause: true,
-                responsive:{
-                    0:{
-                        items:1,
-                    },
-                    576:{
-                        items:2,
-                    },
-                    768:{
-                        items:3,
-                        dots: true,
-                    },
-                    1200:{
-                        items:5,
-                        dots: true,
-                    }
+        $(window).resize(function(){
+            $('#count-down').TimeCircles().rebuild();
+        });
+
+        $('.speaker-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                    dots: true,
+                },
+                1200: {
+                    items: 5,
+                    dots: true,
                 }
-            })
+            }
+        })
 
-		});
-	</script>-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-	 crossorigin="anonymous">
-	<% js.forEach(jsItem => { %>
-	<script type="text/javascript" src="/assets/js/<%= jsItem %>"></script>
-	<% }); %>
+    })
+    ;
+</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous">
+<link rel="stylesheet" href="../assets/css/TimeCircles.css">
+<link rel="stylesheet" href="../assets/css/readme.css">
+<% js.forEach(jsItem => { %>
+<script type="text/javascript" src="/assets/js/<%= jsItem %>"></script>
+<% }); %>
