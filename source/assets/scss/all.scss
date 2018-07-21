@@ -22,11 +22,14 @@
 @import "partials/header";
 @import "partials/nav";
 @import "partials/contents";
-@import "partials/_schedule";
+
 @import "partials/footer";
 
 
 @import "components/paper";
 @import "components/button";
 
+@import "page/_schedule";
+@import "page/_stand";
 @import "page/index";
+
