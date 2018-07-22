@@ -14,7 +14,7 @@
 
 .score {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .score-logo {
@@ -30,7 +30,7 @@
 }
 
 .show-lv-img {
-  @include score-img(auto, 224px, '../images/score/new-picture.png');
+  @include score-img(auto, 224px, '');
 }
 
 .show-ability-img {
@@ -38,7 +38,9 @@
 }
 
 .show-comment-img {
-  @include score-img(395px, 83px, '../images/score/lv1-word.png');
+  // @include score-img(395px, 83px, '../images/score/lv1-word.png');
+  color: #fff;
+  font-size: 24px;
 }
 
 .score-banner-left {
