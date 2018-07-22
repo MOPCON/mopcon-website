@@ -2,14 +2,41 @@
   position: absolute;
 }
 .stand{
-  .banner{
-    background-image: url('../images/stand/visaul@3x.jpg');
+  width: 100vw;
+  .stand-banner {
+    background-image: url('../images/stand/main.png');
     background-size: cover;
     background-position-y:60%;
-    height:500px;
-    width: 100vw;
+    height:450px;
+    width: 70vw;
   }
   .play-game{
-    background-image: url('../images/stand/')
+    background-image: url('../images/stand/playgame.png');
+    width: 272px;
+    height: 58px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  .enter-score {
+    background-image: url('../images/stand/enter-score.png');
+    width: 272px;
+    height: 58px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .bg-left{
+    background-image: url('../images/stand/enter-score.png');
+  }
+  .info{
+     background-image: url('../images/stand/event-description.png');
+     background-repeat: no-repeat;
+     height: 500px;
+     width: 68vw;
   }
 }
