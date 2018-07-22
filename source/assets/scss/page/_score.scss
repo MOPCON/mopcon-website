@@ -1,0 +1,60 @@
+@mixin score-img($imgW, $imgH, $imgURL) {
+  width: $imgW;
+  height: $imgH;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url($imgURL);
+}
+
+@mixin score-text($color) {
+  color: $color;
+  font-size: 3rem;
+}
+
+.score {
+  width: 100vw;
+  height: 100vh;
+}
+
+.score-logo {
+  position: absolute;
+}
+
+.show-text {
+  @include score-text(#FFFFFF);
+}
+
+.show-lv-text {
+  @include score-text(#00d0cb);
+}
+
+.show-lv-img {
+  @include score-img(auto, 224px, '../images/score/new-picture.png');
+}
+
+.show-ability-img {
+  @include score-img(auto, 254px, '../images/score/lv1-value.png');
+}
+
+.show-comment-img {
+  @include score-img(395px, 83px, '../images/score/lv1-word.png');
+}
+
+.score-banner-left {
+  @include score-img(162px, 560px, '../images/score/ball-left.png');
+}
+.score-banner-right {
+  @include score-img(162px, 560px, '../images/score/ball-right.png');
+}
+
+.share-social{
+  background-image: url('../images/score/share-to-fb.png');
+  width: 272px;
+  height: 70px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
+}
