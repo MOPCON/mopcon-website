@@ -8,14 +8,32 @@ engine: ejs
 
 <div class="stand d-flex flex-column align-items-center">
   
-  <!-- <div class="stand-banner"></div> -->
-  <!-- <div class="stand-button m-5">
+  
+  <div class="stand-banner"></div>
+  <div class="stand-button m-5">
     <div class="play-game mb-5"></div>
-    <div class="enter-score"></div>
+    <div class="enter-score" data-toggle="modal" data-target="#getModal"></div>
     <div class="bg-left"></div>
     <div class="bg-right"></div>
   </div>
-  <div class="info"></div> -->
-</div>
-
-<%#- include ./_partials/footer %>
+  <img src="./assets/images/stand/event-description.png" alt="" class="info">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" >
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="getModal" tabindex="-1" role="dialog" aria-labelledby="getModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body  d-flex justify-content-center">
+          ...
+          <input type="text" class="get-score" placeholder="輸入分數看你是誰">
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

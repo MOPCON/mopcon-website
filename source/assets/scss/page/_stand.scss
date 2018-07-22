@@ -1,20 +1,30 @@
-.stand-logo{
+
+ .stand-logo{
   position: absolute;
+  top: 0;
+  left: 0;
+  
+
 }
-.stand{
-  width: 100vw;
+ .stand{
+    width: 100vw;
   .stand-banner {
     background-image: url('../images/stand/main.png');
     background-size: cover;
     background-position-y:60%;
     height:450px;
     width: 70vw;
-  }
+   }
+   .stand-button{
+     position: relative;
+     width: 100vw;
+   }
   .play-game{
     background-image: url('../images/stand/playgame.png');
     width: 272px;
     height: 58px;
     background-repeat: no-repeat;
+    margin: 0 auto;
     cursor: pointer;
     &:hover{
       opacity: 0.8;
@@ -25,18 +35,50 @@
     width: 272px;
     height: 58px;
     background-repeat: no-repeat;
+    margin: 0 auto;
     cursor: pointer;
     &:hover {
       opacity: 0.8;
     }
   }
   .bg-left{
-    background-image: url('../images/stand/enter-score.png');
+    background-image: url('../images/stand/line.png');
+    width: 343px;
+    height: 339px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+  }
+  .bg-right {
+    background-image: url('../images/stand/line-2.png');
+    width: 343px;
+    height: 339px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
   }
   .info{
-     background-image: url('../images/stand/event-description.png');
-     background-repeat: no-repeat;
-     height: 500px;
-     width: 68vw;
+    margin-top: 10rem;
   }
-}
+  #getModal .modal-content {
+    background-color: $c-dark-blue;
+    border: 1px solid $c-light-blue;
+  }
+  .get-score{
+    border: 0;
+    border-bottom: 1px solid $c-light-blue;
+    background-color: transparent;
+  }
+ }
+
+ @media (max-width: 768px) {
+   .stand{
+     .stand-banner{
+       width: 100vw;
+     }
+   }
+ }
