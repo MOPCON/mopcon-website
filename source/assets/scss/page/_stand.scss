@@ -10,16 +10,17 @@
     width: 100vw;
   .stand-banner {
     background-image: url('../images/stand/main.png');
-    background-size: cover;
-    background-position-y:60%;
-    height:450px;
-    width: 70vw;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 450px;
+    width: 100%;
    }
    .stand-button{
      position: relative;
      width: 100vw;
    }
   .play-game{
+    display: block;
     background-image: url('../images/stand/playgame.png');
     width: 272px;
     height: 58px;
@@ -82,7 +83,46 @@
     background-color: transparent;
   }
  }
+ .stand-description {
+   color: #fff;
+   h3 {
+     font-size: 30px;
+   }
+   ul {
+     padding: 0;
+     list-style: none;
+     li {
+       font-size: 24px;
+       margin-bottom: 15px;
+      &:before {
+        font-size: 20px;
+        margin-right: 10px;
+      }
 
+      &:first-child:before {
+        content: 'Step1';
+      }
+
+      &:nth-child(2):before {
+        content: 'Step2';
+      }
+
+      &:nth-child(3):before {
+        content: 'Step3';
+      }
+
+      &:nth-child(4):before {
+        content: 'Step4';
+      }
+
+      &:nth-child(5):before {
+        content: 'Step5';
+      }
+     }
+     
+   }
+   
+ }
  @media (max-width: 768px) {
    .stand{
      .stand-banner{
