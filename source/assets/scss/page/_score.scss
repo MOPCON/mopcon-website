@@ -17,10 +17,6 @@
   // height: 100vh;
 }
 
-.score-logo {
-  position: absolute;
-}
-
 .show-text {
   @include score-text(#FFFFFF);
 }
@@ -47,7 +43,7 @@
   @include score-img(162px, 560px, '../images/score/ball-left.png');
 }
 .score-banner-right {
-  @include score-img(162px, 560px, '../images/score/ball-right.png');
+  @include score-img(190px, 578px, '../images/score/ball-right.png');
 }
 
 .share-social{
