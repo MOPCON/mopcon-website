@@ -67,6 +67,14 @@
   #getModal .modal-content {
     background-color: $c-dark-blue;
     border: 1px solid $c-light-blue;
+    .modal-submit {
+      background-image: url('../images/stand/submit@2x.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+    }
   }
   .get-score{
     border: 0;
