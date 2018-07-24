@@ -43,6 +43,7 @@
     }
   }
   .bg-left{
+    display: none;
     background-image: url('../images/stand/line.png');
     width: 343px;
     height: 339px;
@@ -51,8 +52,12 @@
     background-repeat: no-repeat;
     left: 0;
     top: 0;
+    @media (max-width: 768px) {
+      left: -100px;
+    }
   }
   .bg-right {
+    display: none;
     background-image: url('../images/stand/line-2.png');
     width: 343px;
     height: 339px;
@@ -61,6 +66,9 @@
     background-repeat: no-repeat;
     right: 0;
     top: 0;
+    @media (max-width: 768px) {
+      right: -100px;
+    }
   }
   .info{
     margin-top: 10rem;
@@ -124,9 +132,17 @@
    
  }
  @media (max-width: 768px) {
+  .stand{
+    .stand-banner{
+     background-size: contain;
+     height: 300px;
+    }
+  }
+}
+ @media (max-width: 640px) {
    .stand{
      .stand-banner{
-       width: 100vw;
+      height: 180px;
      }
    }
  }

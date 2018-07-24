@@ -26,7 +26,11 @@
 }
 
 .show-lv-img {
-  @include score-img(auto, 224px, '');
+  width: auto;
+  height: 224px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .show-ability-img {
