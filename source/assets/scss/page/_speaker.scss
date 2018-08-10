@@ -1,0 +1,66 @@
+.speaker-info{
+  width: 225px;
+  border: solid 5px $c-light-blue;
+  border-radius: 5px;
+  background-color: $c-white;
+  margin:2rem;
+  img{
+    width: 135px;
+    height: 135px;
+    clip-path: circle(50%);
+  }
+  .speaker-btn{
+    background-color: $c-dark-blue;
+    border-radius: 10px;
+    color:$c-white;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+  }
+}
+  
+  .modal-dialog.speaker-modal {
+    border-radius: 20px;
+    border: solid 5px $c-light-blue;
+    color:$c-dark-blue;
+    .modal-content {
+      border-radius: 15px;
+      border: 0;
+      padding: 0;
+    }
+    .speaker-close{
+      position: absolute;
+      right:1rem;
+      font-size: 3rem;
+      z-index: 10;
+      color:$c-light-blue;
+    }
+
+    .speaker-modal-info{
+      width: 80%;
+    }
+    img {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      display: block;
+      border: solid 5px #dcdcdc;
+    }
+    .speaker-eng-detail{
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 200;
+    }
+    .speaker-zh-detail{
+      font-weight: 200;
+    }
+    .speaker-modal-btn{
+      button{
+        background-color: $c-light-blue;
+        color:$c-dark-blue;
+        border: 0;
+        border-radius: 5px;
+        padding: 2px .5rem;
+      }
+    }
+  }
+  

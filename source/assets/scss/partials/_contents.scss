@@ -1,5 +1,19 @@
 // contents
-
+.page-title{
+  color:$c-white;
+  &::before,
+  &::after {
+    content: '•';
+    color:$c-light-blue;
+    
+  }
+  &::before{
+    padding-right: 1rem;
+  }
+  &::after {
+    padding-left: 1rem;
+  }
+}
 .content-title {
   color: $c-white;
   font-size: 2.5rem;
@@ -71,3 +85,4 @@
 .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
   background: $c-white;
 }
+
