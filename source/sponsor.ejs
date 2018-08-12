@@ -1,0 +1,181 @@
+---
+title: Code Of Conduct
+layout: ./source/_layouts/pageLayout.ejs
+css: ['all.css']
+js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
+engine: ejs
+---
+
+<% var sponsorData = [
+    // {
+    //     levelTitle: 'Tony Stark',
+    //     sponsorItems: [
+    //         {
+    //             name: 'GoogleCloud',
+    //             logoURL: './assets/images/sponsors/GoogleCloud.png',
+    //             itemMsg: 'Google Cloud 是由 Google 所提供整合產品'
+    //         },
+    //     ]
+    // },
+    {
+        levelTitle: 'Bruce Wayne',
+        sponsorItems: [
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/AWS.png',
+                itemMsg: 'Google Cloud 是由 Google 所提供\n' +
+                        '整合產品、科技與服務的獨特解決\n' +
+                        '方案，協助我們的客戶以簡單的操\n' +
+                        '作方式達到客戶所需求的效能。\n' +
+                        'Google Cloud橫跨商業的每個層面\n' +
+                        '，包括Google Cloud Platform所有\n' +
+                        '的服務、協作生產力應用套件─ \n' +
+                        'G Suite、機器學習工具與 API、企\n' +
+                        '業地圖 API、以及 接上雲端的 And-\n' +
+                        'roid 電話、平板與 Chromebook，\n' +
+                        '這一切的解決方案與服務，都是建\n' +
+                        '構於雲端之上。'
+            },
+            {
+                name: 'OathYahoo',
+                logoURL: './assets/images/sponsors/OathYahoo.png',
+                itemMsg: 'OathYahoo'
+            }
+        ]
+    },
+    {
+        levelTitle: 'Hacker',
+        sponsorItems: [
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'Webduino',
+                logoURL: './assets/images/sponsors/Webduino.png',
+                itemMsg: 'Webduino'
+            }
+        ]
+    },
+    {
+        levelTitle: 'Geek',
+        sponsorItems: [
+            {
+                name: 'Dcard',
+                logoURL: './assets/images/sponsors/Dcard.png',
+                itemMsg: 'Dcard'
+            },
+            {
+                name: 'kkbox',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'kkbox'
+            }
+        ]
+    },
+    {
+        levelTitle: 'Developer',
+        sponsorItems: [
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/AWS.png',
+                itemMsg: 'Google Cloud 是由 Google 所提供整合產品'
+            },
+            {
+                name: 'OathYahoo',
+                logoURL: './assets/images/sponsors/OathYahoo.png',
+                itemMsg: 'Google Cloud 是由 Google 所提供整合產品'
+            }
+        ]
+    },
+    {
+        levelTitle: '特別感謝',
+        sponsorItems: [
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/AWS.png',
+                itemMsg: 'Google Cloud 是由 Google 所提供整合產品'
+            },
+            {
+                name: 'OathYahoo',
+                logoURL: './assets/images/sponsors/OathYahoo.png',
+                itemMsg: 'Google Cloud 是由 Google 所提供整合產品'
+            }
+        ]
+    }
+]; %>
+
+<div class="d-flex flex-column align-items-center">
+    <h2 class="page-title mt-5 mb-5">SPONSOR</h2>
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around mb-lg-5">
+            <div class="sponsor-container col-12 d-flex align-items-center justify-content-center">
+                <div class="level-info">
+                    Tony Stark
+                </div>
+                <img class="tony-img"
+                     data-toggle="modal"
+                     data-target="#sponsorModal"
+                     src="./assets/images/sponsors/GoogleCloud.png"
+                     alt=""
+                     srcset=""
+                >
+            </div>
+
+            <% for(var i = 0; i < sponsorData.length; i++) { %>
+            <div class="sponsor-container col-12 d-flex align-items-center justify-content-center">
+                <div class="level-info">
+                    <%= sponsorData[i].levelTitle %>
+                </div>
+                <!--<div class="mr-auto">-->
+                <% for(var j = 0; j < sponsorData[i].sponsorItems.length; j++) { %>
+                <img class="others-img mx-4"
+                     data-toggle="modal"
+                     data-target="#sponsorModal"
+                     src="<%= sponsorData[i].sponsorItems[j].logoURL %>"
+                     alt=""
+                     srcset=""
+                >
+
+                <!--Should to do independent into one component-->
+
+                <div class="modal fade" id="sponsorModal" tabindex="-1" role="dialog" aria-labelledby="sponsorModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog sponsor-modal" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="sponsor-close close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="modal-body">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="sponsor-modal-info">
+                                        <div class="d-flex flex-column mt-5">
+                                            <h5><%= sponsorData[i].sponsorItems[j].name %></h5>
+                                        </div>
+                                        <img class="my-3"
+                                             src="<%= sponsorData[i].sponsorItems[j].logoURL %>"
+                                             alt="" srcset=""
+                                        >
+                                    </div>
+                                    <div class="sponsor-zh-detail mx-5">
+                                        <%= sponsorData[i].sponsorItems[j].itemMsg %>
+                                    </div>
+                                    <div class="sponsor-modal-btn mt-5 mb-3">
+                                        <button>官方網站</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Should to do independent into one component-->
+
+                <% } %>
+                <!--</div>-->
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include ./_partials/footer %>

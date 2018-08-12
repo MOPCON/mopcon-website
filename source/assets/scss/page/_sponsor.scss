@@ -1,0 +1,82 @@
+.sponsor-container{
+  height: 206px;
+  border: solid 5px $c-light-blue;
+  border-radius: 10px;
+  background-color: $c-white;
+  margin:2rem;
+  .tony-img {
+    width: 560px;
+    height: 100px;
+    cursor: pointer;
+  }
+  .others-img {
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+  }
+}
+
+.level-info {
+  position: absolute;
+  top: -25px;
+  width: 300px;
+  height: 45px;
+  border: solid 0 $c-light-blue;
+  border-radius: 10px;
+  background-color: $c-light-blue;
+  color: $c-white;
+  //font-family: NotoSansCJKtc;
+  line-height: 1.25;
+  font-size: 33px;
+  font-weight: 500;
+  text-align: center;
+}
+  
+  .modal-dialog.sponsor-modal {
+    border-radius: 20px;
+    border: solid 5px $c-light-blue;
+    color:$c-dark-blue;
+    .modal-content {
+      border-radius: 15px;
+      border: 0;
+      padding: 0;
+    }
+    .sponsor-close{
+      position: absolute;
+      right:1rem;
+      font-size: 3rem;
+      z-index: 10;
+      color:$c-light-blue;
+    }
+
+    .sponsor-modal-info{
+      width: 80%;
+    }
+    img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    h5 {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    .sponsor-eng-detail{
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 200;
+    }
+    .sponsor-zh-detail{
+      font-weight: 200;
+    }
+    .sponsor-modal-btn{
+      button{
+        background-color: $c-light-blue;
+        color:$c-dark-blue;
+        border: 0;
+        border-radius: 5px;
+        padding: 2px .5rem;
+      }
+    }
+  }
+  
