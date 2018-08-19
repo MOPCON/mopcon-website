@@ -1,13 +1,22 @@
 .ticket-item {
     border-radius: 10px;
     height: 140px;
-    &.type1 .ticket-type{
-        background-color: $c-light-blue;
-        font-size: 28px;
+    &.type1 {
+        .ticket-type{
+            background-color: $c-light-blue;
+            font-size: 28px;
+        }
     }
-    &.type2 .ticket-type{
+    &.type2 {
+        .ticket-type{
         background-color: #25817f;
         font-size: 23px;
+        }
+        .ticket-ribbon {
+            color: #b3581b;
+            background: linear-gradient(to right, #ffdc00, #e4b506, #e4b506);
+            text-shadow: 1.1px 1.7px 1px #fde262;
+        }
     }
     &.type3 {
         height: 185px;
@@ -16,20 +25,51 @@
             font-size: 23px;
             line-height: 185px;
         }
+        .ticket-ribbon {
+            color: #420112;
+            background: linear-gradient(to right, #f31b2a, #f00d13, #9f0000);
+            text-shadow: 1.1px 1.7px 1px #ff4242;
+        }
         
     }
 }
 .ticket-type {
+    z-index: 2;
     width: 140px;
+    position: relative;
+    font-family: PingFangTC;
     color: #fff;
     line-height: 140px;
     text-align: center;
     border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px; 
     
-    span {
+    .name {
         width: 100%;
     }
+}
+.robbon-wrap {
+    width: 100px;
+    height: 82px;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+.ticket-ribbon{ 
+    position: relative;
+    right: -20px;
+    top: 8px;
+    width: 96px;
+    height: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    line-height: 22px;
+    text-align: center;
+    transform: rotate(37deg);
+    font-size: 15px;
+    font-weight: 600;
+  
 }
 .ticket-content {
     color: #000033;
@@ -59,4 +99,36 @@
     position: absolute;
     right: 20px;
     bottom: 15px;
+}
+.btn-ticket {
+    position: relative;
+    color: #000000;
+    padding: 10px 20px;
+    line-height: 1;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    background: $c-light-blue;
+    border: $c-light-blue;
+    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(  60deg,
+        transparent 45px,
+        rgba(256, 256, 256, 0.3) 45px,
+        rgba(256, 256, 256, 0.3) 60px,
+        transparent 60px,
+        transparent 100%);
+    }
+}
+
+.btn-ticket:hover {
+    background: $c-light-blue;
+   
 }
