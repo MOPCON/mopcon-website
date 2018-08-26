@@ -14,3 +14,9 @@
 	justify-content: $justify;
 	align-items: $align;
 }
+
+@mixin font-custom($color, $size, $align) {
+	color: $color;
+	font-size: $size;
+	text-align: $align;
+}

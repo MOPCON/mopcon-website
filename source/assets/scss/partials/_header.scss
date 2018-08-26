@@ -1,60 +1,26 @@
 // header
-.particles{
-  position: relative;
-  .left,.right{
+
+.particles {
+  .left, .right {
     width: 20vw;
     height: 50%;
     position: absolute;
   }
-  .left{
-    left:0;
+  .left {
+    left: 0;
     &:nth-child(2) {
       bottom: 0;
     }
   }
-  .right{
-    right:0;
+  .right {
+    right: 0;
     &:nth-child(4) {
       bottom: 0;
     }
   }
-  @media screen and (min-width: 769px){ 
-    min-height: 560px;
-  }
-}
-.carousel.banner{
-  position: absolute;
-} 
-.logo{
-  width: 40%;
-  height: 40%;
-}
-.time {
-  display: flex;
-  margin: 20px auto ;
-}
-
-.time-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  span {
-    font-size: 12px;
-    color: $c-white;
-    margin-bottom: 0.5rem;
-  }
-}
-
-.circle {
-  border: 2px solid $c-white;
-  border-radius: 100%;
-  height: 64px;
-  width: 64px;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $c-white;
+  //@media screen and (min-width: 769px) {
+  //  min-height: 560px;
+  //}
 }
 
 .buy-ticket {
@@ -63,68 +29,95 @@
 }
 
 .ticket-btn {
-  border: 2px solid $c-light-blue;
-  border-radius: 2px;
   width: 96px;
-  height: 36px;
-  background-color: $c-light-blue;
-  color: $c-white;
-  font-size: 0.9rem;
+  button {
+    border: 2px solid $c-light-blue;
+    border-radius: 2px;
+    width: 100%;
+    height: 36px;
+    background-color: $c-light-blue;
+    color: $c-white;
+    font-size: 0.9rem;
+  }
 }
 
 .arrow {
-  margin: 5px auto;
-  text-align: center;
+  width: 96px;
 }
-.fa-angle-down{
+
+.fa-angle-down {
   font-size: 50px;
-  color:$c-white;
 }
 
-@media screen and (max-width: 320px){
-   
-  .logo{
-    width: 80vw;
-    // height: 80vw;
-  }
-  .carousel-indicators{
-    bottom:-60px;
-  }
+.banner-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px){
-   
-  .logo{
-    width: 80vw;
-  }
-  .carousel-indicators{
-    bottom:-60px;
-  }
-  .carousel.banner{
-    width: 100vw;
-  }
+.banner-carousel .owl-dots {
+  justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  zoom: 1;
+  margin-bottom: 3rem;
 }
 
-
-@media screen and (min-width: 414px) and (max-width: 768px){
-   
-  .logo{
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  #logo {
     width: 70vw;
-    height: 70vw;
   }
-  .carousel-inner{
-    width: 100vw;
+  .left, .right {
+   display: none;
   }
-  .carousel-indicators{
-    bottom:-60px;
+  .banner-text {
+    @include font-custom($c-white, 1.25rem, center);
+    position: absolute;
+    bottom: 1rem;
   }
 }
 
-.sub-title {
-  color: #fff;
-  font-family: 'Rajdhani';
-  font-size: 29px;
-  @media screen and (max-width: 640px){
-    font-size: 16px;
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #logo {
+    width: 60vw;
+  }
+  .left, .right {
+    display: none;
+  }
+  .banner-text {
+    @include font-custom($c-white, 1.5rem, center);
+    position: absolute;
+    bottom: 1rem;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #logo {
+    width: 50vw;
+  }
+  .banner-text {
+    @include font-custom($c-white, 1.5rem, center);
+    position: absolute;
+    bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #logo {
+    width: 34vw;
+  }
+  .banner-text {
+    @include font-custom($c-white, 1.75rem, center);
+    position: absolute;
+    bottom: 4rem;
+  }
+}
+
+//.sub-title {
+//  color: #fff;
+//  font-family: 'Rajdhani';
+//  font-size: 29px;
+//  @media screen and (max-width: 640px){
+//    font-size: 16px;
+//  }
+//}
