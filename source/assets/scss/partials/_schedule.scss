@@ -1,0 +1,161 @@
+.schedule{
+    h2,h5{
+        color:$c-white;
+    }
+    h2{
+        margin-bottom: 2rem;
+    }
+    h5{
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .date{
+        width: 12rem;
+        button {
+            width: 10rem;
+            color:$c-white;
+            background-color: transparent;
+        }
+        button:nth-child(1){
+            border:1px solid $c-light-blue;
+            border-radius:10px 0px 0px 10px; 
+        }
+        button:nth-child(2){
+            border:1px solid $c-light-blue;
+            border-radius:0px 10px 10px 0; 
+        }
+        button.active{
+            background-color: $c-light-blue;
+            color:$c-white;
+        }
+    }
+    .container{
+        text-align: center;
+    }
+    .container.day02{
+        display: none;
+    }
+    .container{
+        .list{
+            max-width: 44rem;
+            
+        }
+    }
+    .title{
+        // width: 44rem;
+        color:$c-white;
+        background-color: $c-light-blue;
+        padding: 1rem;
+    }
+    .item{
+        text-align: center;
+        color:$c-dark-blue;
+        background-color: $c-white;
+        padding:.5rem 1rem;
+        border-top: 1px solid $c-dark-blue;
+        border-bottom: 1px solid $c-dark-blue;
+    }
+    .item.break{
+        border-top: 2px solid $c-dark-blue;
+        border-bottom: 2px solid $c-dark-blue;
+        font-weight: bold;
+    }
+    .speechTime{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .speechTalk,
+    .sponsorTalk {
+        background-color: $c-table-bg;
+    }
+    .tag span{
+        border: 1px solid $c-dark-blue;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 2px 4px;
+        font-weight: bold;
+    }
+    .speaker{
+        font-size: 20px;
+        margin: .5rem;
+    }
+    .serviceTag{
+       display: flex;
+       justify-content: flex-end;
+    }
+    .serviceTag span{
+        background-color: $c-dark-blue;
+        color:$c-white;
+        padding: 2px 4px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 960px) {
+    .schedule {
+        .row.title{
+            & > div:not(:first-child) {
+                display: none;
+            }
+        }
+        .row.break,
+        .row.sponsorTalk {
+            &>div:first-child {
+                border-bottom: 2px solid $c-dark-blue;
+            }
+        }
+        .speechTalk{
+            .speechTime{
+                padding: .5rem 0;
+            }
+            & > div:nth-child(2) {
+                 border-top: 2px solid $c-dark-blue;
+                &::after{
+                    content:'R1';
+                    color:$c-white;
+                    background-color: $c-dark-blue;
+                    position: absolute;
+                    top: 0;
+                    right:0;
+                    padding: 6px;
+                }
+            }
+            &>div:nth-child(3) {
+                border-top: 2px solid $c-dark-blue;
+                &::after {
+                    content: 'R2';
+                    color:$c-white;
+                    background-color: $c-dark-blue;
+                    position: absolute;
+                    top: 0;
+                    right:0;
+                    padding: 6px;
+                }
+            }
+            &>div:nth-child(4) {
+                border-top: 2px solid $c-dark-blue;
+                &::after {
+                    content: 'R3';
+                    color:$c-white;
+                    background-color: $c-dark-blue;
+                    position: absolute;
+                    top: 0;
+                    right:0;
+                    padding: 6px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .schedule{
+        .container {
+            .list {
+                width: 90%;
+            }
+        }
+    }
+}
