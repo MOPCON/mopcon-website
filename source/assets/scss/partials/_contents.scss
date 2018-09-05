@@ -1,21 +1,37 @@
 // contents
-
+// contents
+.page-title{
+  color:$c-white;
+  &::before,
+  &::after {
+    content: '•';
+    color:$c-light-blue;
+    
+  }
+  &::before{
+    padding-right: 1rem;
+  }
+  &::after {
+    padding-left: 1rem;
+  }
+}
 .content-title {
   color: $c-white;
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-.home-speaker-info {
+.speaker-info {
   h2 {
     color: $c-white;
+    font-size: 1rem;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
   }
 }
 
-.home-speaker-img {
+.speaker-img {
   border-radius: 99em;
 }
 
@@ -44,7 +60,7 @@
   border-radius: 99em;
 }
 
-.speaker-carousel .owl-dots {
+.owl-dots {
   justify-content: center;
   width: 100%;
   margin-top: 3rem;
@@ -69,68 +85,4 @@
 
 .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
   background: $c-white;
-}
-
-@media screen and (min-width: 320px) and (max-width: 575px) {
-  .sponsor-info-container {
-    margin: 12px 12px;
-  }
-
-  .home-speaker-info {
-    h2 {
-      font-size: 1.25rem;
-    }
-  }
-
-  .content-title {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .sponsor-info-container {
-    margin: 12px 12px;
-  }
-
-  .home-speaker-info {
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
-
-  .content-title {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .sponsor-info-container {
-    margin: 24px 48px;
-  }
-
-  .home-speaker-info {
-    h2 {
-      font-size: 1rem;
-    }
-  }
-
-  .content-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 993px) {
-  .sponsor-info-container {
-    margin: 24px 48px;
-  }
-
-  .home-speaker-info {
-    h2 {
-      font-size: 1rem;
-    }
-  }
-
-  .content-title {
-    font-size: 2.5rem;
-  }
 }

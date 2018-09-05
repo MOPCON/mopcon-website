@@ -1,16 +1,18 @@
 .ticket-item {
     border-radius: 10px;
-    height: 140px;
+    // @media (min-width: 769px) {
+    //     height: 140px;
+    // }
     &.type1 {
-        .ticket-type{
+        .ticket-type {
             background-color: $c-light-blue;
             font-size: 28px;
         }
     }
     &.type2 {
-        .ticket-type{
-        background-color: #25817f;
-        font-size: 23px;
+        .ticket-type {
+            background-color: #25817f;
+            font-size: 23px;
         }
         .ticket-ribbon {
             color: #b3581b;
@@ -19,35 +21,64 @@
         }
     }
     &.type3 {
-        height: 185px;
+        @media (min-width: 769px) {
+            height: initial;
+        }
         .ticket-type {
             background-color: #0b525f;
             font-size: 23px;
-            line-height: 185px;
+            // @media (min-width: 769px) {
+            //     line-height: 185px;
+            // }
         }
         .ticket-ribbon {
             color: #420112;
             background: linear-gradient(to right, #f31b2a, #f00d13, #9f0000);
             text-shadow: 1.1px 1.7px 1px #ff4242;
         }
-        
     }
 }
+
 .ticket-type {
     z-index: 2;
-    width: 140px;
+    width: 100%;
+    @media (min-width: 769px) {
+        width: 140px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
     position: relative;
     font-family: PingFangTC;
     color: #fff;
-    line-height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-    
     .name {
+        color: #fff;
         width: 100%;
+        padding: 5px;
     }
+    @media (min-width: 769px) {
+    .name {
+   
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center; 
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+    }}
+  
 }
+
 .robbon-wrap {
     width: 100px;
     height: 82px;
@@ -56,7 +87,8 @@
     top: -1px;
     right: -1px;
 }
-.ticket-ribbon{ 
+
+.ticket-ribbon {
     position: relative;
     right: -20px;
     top: 8px;
@@ -69,37 +101,53 @@
     transform: rotate(37deg);
     font-size: 15px;
     font-weight: 600;
-  
 }
+
 .ticket-content {
     color: #000033;
     position: relative;
-    width: -webkit-calc(100% - 140px);
-    width: calc(100% - 140px);
+    width: 100%;
+    @media (min-width: 769px) {
+        width: -webkit-calc(100% - 140px);
+        width: calc(100% - 140px);
+        padding: 25px 235px 25px 40px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
     background-color:#fff;
-    padding: 25px 235px 25px 40px;
-    border-top-right-radius: 10px; 
+    padding: 15px;
+    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     h4 {
         font-size: 23px;
         font-family: PingFangHK;
         font-weight: 500;
-    } 
+    }
     p {
         font-family: PingFangTC;
         font-weight: 500;
         font-size: 14px;
         line-height: 30px;
         span {
-             font-weight: initial;
+            font-weight: initial;
         }
     }
 }
+
 .ticket-tool {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+    @media (min-width: 769px) {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+    }
+    text-align: center;
+    p {
+        display: none;
+    }
+    
 }
+
 .btn-ticket {
     position: relative;
     color: #000000;
@@ -119,16 +167,10 @@
         top: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(  60deg,
-        transparent 45px,
-        rgba(256, 256, 256, 0.3) 45px,
-        rgba(256, 256, 256, 0.3) 60px,
-        transparent 60px,
-        transparent 100%);
+        background: linear-gradient( 60deg, transparent 45px, rgba(256, 256, 256, 0.3) 45px, rgba(256, 256, 256, 0.3) 60px, transparent 60px, transparent 100%);
     }
 }
 
 .btn-ticket:hover {
     background: $c-light-blue;
-   
 }
