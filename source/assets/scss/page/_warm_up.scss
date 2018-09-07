@@ -24,6 +24,7 @@
     background-position: 0 -530px;
     padding-top: 200px;
     margin-bottom:7rem;
+    
     .logo {
       width: 381px;
       height: 260px;
@@ -110,5 +111,28 @@
       height: 200px;
       border-radius: 5px;
     }
+  }
+}
+
+.ele-bg {
+  position: relative;
+
+  >img {
+    width: 150px;
+    position: absolute;
+  }
+  .ele-2{
+    left: 0;
+    top: 30vh;
+  }
+  .ele-1,.ele-4{
+    right:0;
+  }
+  .ele-4 {
+    top: 20vh;
+    width: 200px;
+  }
+  .ele-1{
+    top:70vh;
   }
 }
