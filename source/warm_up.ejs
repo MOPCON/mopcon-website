@@ -1,7 +1,7 @@
 ---
 title: Code Of Conduct - Mopcon 暖身場
 layout: ./source/_layouts/spec.ejs
-css: ['all.css']
+css: ['all.css','vendor/font-awesome/fontawesome.css']
 js: ['schedule.js','bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
 engine: ejs
 ---
@@ -67,9 +67,9 @@ engine: ejs
             </a>
             <span class="ticket-info">購票資訊</span>
         </div>
-        <img src="./assets/images/warm-up/ele-1.png" class="ele-1">
-        <img src="./assets/images/warm-up/ele-2.png" class="ele-2">
-        <img src="./assets/images/warm-up/ele-4.png" class="ele-4">
+        <img src="./assets/images/warm-up/ele-1.png" class="ele ele-1">
+        <img src="./assets/images/warm-up/ele-2.png" class="ele ele-2">
+        <img src="./assets/images/warm-up/ele-4.png" class="ele ele-4">
     </div>
 </div>
 <div class="panel">
@@ -89,45 +89,74 @@ engine: ejs
         <div class="warm-up-people col-sm-6">
             <h4 class="page-title">暖身場可以做些什麼事？</h4>
             <div class="row">
-                <div class="col-sm-3">
-                    123
+                <div class="col-sm-3 people text-center">
+                    <i class="fas fa-users"></i>
+                    <h5>我是會眾</h5>
+                    <span>
+                        好想聽更多大神的演講
+                        ，有了暖身場可以聽到
+                        飽聽到爽！
+                    </span>
                 </div>
-                <div class="col-sm-3">
-                    123
+                <div class="col-sm-3 people text-center">
+                    <i class="fas fa-user-graduate"></i>
+                    <h5>我是講者</h5>
+                    <span>
+                        難得來到南台灣，除了
+                        遊山玩水外，還有好多
+                        的議題想要分享～
+                    </span>
                 </div>
-                <div class="col-sm-3">
-                    123
+                <div class="col-sm-3 people text-center">
+                    <i class="fas fa-user-edit"></i>
+                    <h5>我是議程委員</h5>
+                    <span>
+                        默默在幕後辛辛苦苦審
+                        理稿件也想要來 Show
+                        一波～
+                    </span>
                 </div>
-                <div class="col-sm-3">
-                    123
+                <div class="col-sm-3 people text-center">
+                    <i class="fas fa-user-tie"></i>
+                    <h5>我是廠商</h5>
+                    <span>
+                        透過精緻的 Workshop
+                        可以有更多的機會進行
+                        手把手教學～
+                    </span>
                 </div>
             </div>
         </div>
         <div class="warm-up-schedule col-sm-6">
             <h4 class="page-title">時刻表</h4>
-            <table class="col-sm-12">
-                <thead>
-                <tr>
-                    <th>時間</th>
-                    <th>活動</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="break">
-                    <td>09:30 - 10:00</td>
-                    <td>報到</td>
-                </tr>
-                <tr>
-                    <td>09:30 - 10:00</td>
-                    <td>
+            <div class="table">
+                <div class="row table-title">
+                    <div class="col-sm-4 text-center">
+                        時間
+                    </div>
+                    <div class="col-sm-8 text-center">
+                        活動
+                    </div>
+                </div>
+                <div class="row break">
+                    <div class="col-sm-4 text-center">
+                        09:30 - 10:00
+                    </div>
+                    <div class="col-sm-8 text-center">
+                        報到
+                    </div>
+                </div>
+                <div class="row conf">
+                    <div class="col-sm-4 text-center">
+                        09:30 - 10:00
+                    </div>
+                    <div class="col-sm-8 text-center">
                         <span class="tag">Blockchain</span>
                         <h6>黃敬群(jserv)</h6>
                         <span>透過區塊鏈打造行動化數位證書</span>
-                    </td>
-                </tr>
-                <tr></tr>
-                </tbody>
-            </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="warm-up-ticket">
             <h4 class="page-title">售票資訊</h4>
@@ -156,7 +185,7 @@ engine: ejs
         </div>
     </div>
 </div>
-<div class="warm-up-guide">
+<div class="warm-up-guide d-flex align-items-center flex-column">
     <div class="warm-up row d-flex align-items-center flex-column">
         <h4 class="page-title">指導單位</h4>
         <div class="item"></div>
