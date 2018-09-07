@@ -6,7 +6,7 @@ js: ['schedule.js','bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/pa
 engine: ejs
 ---
 <div class="panel">
-    <nav class="navbar navbar-expand-lg warm-up">
+    <nav class="navbar navbar-expand-lg warm-up" data-div-name="first">
         <a class="navbar-brand" href="./../index.html">
             <img src="assets/images/white-logo.png" alt="" srcset="">
         </a>
@@ -15,21 +15,20 @@ engine: ejs
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./../speaker.html">
+                <li id="warm-up-link" class="nav-item dropdown">
+                    <a class="nav-link warm-up-toggle">
                         暖身場
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./../sponsor.html">
+                <li id="timetable-link" class="nav-item dropdown">
+                    <a class="nav-link warm-up-toggle">
                         時刻表
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="./../ticket.html">
+                <li id="ticket-link" class="nav-item dropdown">
+                    <a class="nav-link warm-up-toggle">
                         售票
                     </a>
                 </li>
@@ -74,7 +73,7 @@ engine: ejs
 </div>
 <div class="panel">
     <div class="warm-up row d-flex align-items-center flex-column">
-        <div class="warm-up-info col-sm-6">
+        <div class="warm-up-info col-sm-6" data-div-name="#second">
             <h4 class="page-title">暖身場是什麼？</h4>
             <p>
                 MOPCON 創立至今已達七年之久，從 2012 到現在，堅持濁水溪以南這句話 ... 我們堅持了七年，有了您才有今天的 MOPCON ，就在今年 ， 我們決定有 個番外活動，「 MOPCON
@@ -127,7 +126,11 @@ engine: ejs
                 </div>
             </div>
         </div>
-        <div class="warm-up-schedule col-sm-6">
+    </div>
+</div>
+<div class="panel">
+    <div class="warm-up row d-flex align-items-center flex-column">
+        <div class="warm-up-schedule col-sm-6" data-div-name="#three">
             <h4 class="page-title">時刻表</h4>
             <div class="table">
                 <div class="row table-title">
@@ -158,7 +161,11 @@ engine: ejs
                 </div>
             </div>
         </div>
-        <div class="warm-up-ticket">
+    </div>
+</div>
+<div class="panel">
+    <div class="warm-up row d-flex align-items-center flex-column">
+        <div class="warm-up-ticket" data-div-name="#four">
             <h4 class="page-title">售票資訊</h4>
             <div class="ticket-item type1 row mb-4">
                 <div class="ticket-type  d-flex flex-column align-items-start">
@@ -183,11 +190,11 @@ engine: ejs
                 <a class="btn btn-ticket">MOPCON 2018 立即購票</a>
             </div>
         </div>
-    </div>
-</div>
-<div class="warm-up-guide d-flex align-items-center flex-column">
-    <div class="warm-up row d-flex align-items-center flex-column">
-        <h4 class="page-title">指導單位</h4>
-        <div class="item"></div>
+        <div class="warm-up-guide d-flex align-items-center flex-column">
+            <div class="warm-up row d-flex align-items-center flex-column">
+                <h4 class="page-title">指導單位</h4>
+                <div class="item"></div>
+            </div>
+        </div>
     </div>
 </div>

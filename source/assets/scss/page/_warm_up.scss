@@ -21,7 +21,7 @@
     background-image: url("../images/warm-up/visual.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0 -530px;
+    background-position: 0 -780px;
     padding-top: 200px;
     margin-bottom:7rem;
     
@@ -147,6 +147,13 @@
   }
   .ele-1{
     top:70vh;
+  }
+}
+
+.warm-up-toggle {
+  cursor: pointer;
+  &:hover {
+    color: #00d0ca !important;
   }
 }
 

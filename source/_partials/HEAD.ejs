@@ -15,9 +15,21 @@
     $(function () {
         $.scrollify({
             section: ".panel",
-            //sectionName:false,
+            // sectionName: '#warm',
             scrollSpeed: 1100,
             overflowScroll: true,
+        });
+
+        $("#warm-up-link").click(function(){
+            $.scrollify.move("#2");
+        });
+
+        $("#timetable-link").click(function(){
+            $.scrollify.move("#3");
+        });
+
+        $("#ticket-link").click(function(){
+            $.scrollify.move("#4");
         });
 
         $(".arrow-go").click(function (e) {
