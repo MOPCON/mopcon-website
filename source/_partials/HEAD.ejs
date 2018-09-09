@@ -15,25 +15,33 @@
     $(function () {
         $.scrollify({
             section: ".panel",
-            // sectionName: '#warm',
+            // sectionName: false,
             scrollSpeed: 1100,
             overflowScroll: true,
         });
 
+        $.scrollify.disable();
+
         $("#warm-up-link").click(function(){
-            $.scrollify.move("#2");
+            warmupScrollify("#2");
         });
 
         $("#timetable-link").click(function(){
-            $.scrollify.move("#3");
+            warmupScrollify("#3");
         });
 
         $("#ticket-link").click(function(){
-            $.scrollify.move("#4");
+            warmupScrollify("#4");
         });
         $("#spthank-link").click(function(){
-            $.scrollify.move("#5");
+            warmupScrollify("#5");
         });
+
+        function warmupScrollify(target) {
+            $.scrollify.enable();
+            $.scrollify.move(target);
+            $.scrollify.disable();
+        }
 
         $(".arrow-go").click(function (e) {
             e.preventDefault();
