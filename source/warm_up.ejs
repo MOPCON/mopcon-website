@@ -2,10 +2,10 @@
 title: Code Of Conduct - Mopcon 暖身場
 layout: ./source/_layouts/spec.ejs
 css: ['all.css','vendor/font-awesome/fontawesome.css']
-js: ['schedule.js','bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
+js: ['schedule.js','warmUpScrollify.js','bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
 engine: ejs
 ---
-<div class="panel">
+<div id="testwarm" class="panel">
     <nav class="navbar navbar-expand-lg warm-up" data-div-name="first">
         <a class="navbar-brand" href="./../index.html">
             <img src="assets/images/white-logo.png" alt="" srcset="">
@@ -42,6 +42,7 @@ engine: ejs
                         MOPCON2018
                     </a>
                 </li>
+            </ul>
         </div>
         <div class="nav-lang">
             <a href="?&amp;lang=zh" class="btn btn-translate py-0">中</a>
@@ -56,9 +57,9 @@ engine: ejs
                 <h4>Dakuo高雄市數位內容創意中心</h4>
                 <h2>11/2</h2>
             </div>
-            <a href="" class="arrow-go">
+            <div id="warm-arrow-go" class="arrow-go">
                 <img src="./assets/images/warm-up/arrows.png" srcset="">
-            </a>
+            </div>
             <span class="ticket-info">購票資訊</span>
         </div>
         <img src="./assets/images/warm-up/ele-1.png" class="ele ele-1">
@@ -227,4 +228,7 @@ engine: ejs
                 </div>
             </div>
     </div>
+</div>
+<div id="back-to-top" title="Back to top" class="">
+    <i class="top-arrow-icon"></i>
 </div>

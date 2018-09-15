@@ -13,36 +13,6 @@
 <script type="text/javascript" src="../assets/js/plugin/TimeCircles.js"></script>
 <script>
     $(function () {
-        $.scrollify({
-            section: ".panel",
-            // sectionName: false,
-            scrollSpeed: 1100,
-            overflowScroll: true,
-        });
-
-        $.scrollify.disable();
-
-        $("#warm-up-link").click(function(){
-            warmupScrollify("#2");
-        });
-
-        $("#timetable-link").click(function(){
-            warmupScrollify("#3");
-        });
-
-        $("#ticket-link").click(function(){
-            warmupScrollify("#4");
-        });
-        $("#spthank-link").click(function(){
-            warmupScrollify("#5");
-        });
-
-        function warmupScrollify(target) {
-            $.scrollify.enable();
-            $.scrollify.move(target);
-            $.scrollify.disable();
-        }
-
         $(".arrow-go").click(function (e) {
             e.preventDefault();
             $.scrollify.next();

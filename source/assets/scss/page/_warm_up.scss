@@ -116,6 +116,37 @@
   }
 }
 
+#warm-arrow-go {
+  cursor: pointer;
+}
+
+.show-top-arrow {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 9999;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  font-size: 18px;
+  background-color: $c-light-blue;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+}
+ i {
+   border: solid black;
+   border-width: 0 5px 5px 0;
+   display: inline-block;
+   padding: 3px;
+ }
+
+.top-arrow-icon {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
 .warm-up-guide {
   margin-top: 8rem;
   margin-bottom: 6rem;
@@ -154,7 +185,7 @@
 .warm-up-toggle {
   cursor: pointer;
   &:hover {
-    color: #00d0ca !important;
+    color: $c-light-blue !important;
   }
 }
 
