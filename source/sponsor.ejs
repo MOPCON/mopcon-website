@@ -1,5 +1,5 @@
 ---
-title: Code Of Conduct
+title: Sponsors
 layout: ./source/_layouts/pageLayout.ejs
 css: ['all.css']
 js: ['bootstrap/bootstrap.js',plugin/jquery.scrollify.js,plugin/particles.min.js,plugin/stats.js,plugin/owl.carousel.min.js]
@@ -46,6 +46,36 @@ engine: ejs
     {
         levelTitle: 'Hacker',
         sponsorItems: [
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
+            {
+                name: 'AWS',
+                logoURL: './assets/images/sponsors/kkbox.png',
+                itemMsg: 'AWS'
+            },
             {
                 name: 'AWS',
                 logoURL: './assets/images/sponsors/kkbox.png',
@@ -107,35 +137,45 @@ engine: ejs
 
 <div class="d-flex flex-column align-items-center">
     <h2 class="page-title mt-5 mb-5">SPONSOR</h2>
-    <div class="container">
-        <div class="d-flex flex-wrap justify-content-around mb-lg-5">
-            <div class="sponsor-container col-12 d-flex align-items-center justify-content-center">
-                <div class="level-info">
-                    Tony Stark
+            <div class="sponsor-container container mb-5">
+                <div style="position: relative;">
+                    <div class="level-info">
+                        Tony Stark
+                    </div>
                 </div>
-                <img class="tony-img"
+                <div class="col-md-3 col-sm-6" data-toggle="modal"
+                    data-target="#sponsorModal">
+                <img class="img-fluid"
                      data-toggle="modal"
                      data-target="#sponsorModal"
                      src="./assets/images/sponsors/GoogleCloud.png"
                      alt=""
                      srcset=""
                 >
+                </div>
             </div>
 
             <% for(var i = 0; i < sponsorData.length; i++) { %>
-            <div class="sponsor-container col-12 d-flex align-items-center justify-content-center">
-                <div class="level-info">
-                    <%= sponsorData[i].levelTitle %>
+            <div class="sponsor-container container mb-5">
+                <div style="position: relative;">
+                    <div class="level-info">
+                        <%= sponsorData[i].levelTitle %>
+                    </div>
                 </div>
+                
                 <!--<div class="mr-auto">-->
+                    <div class="row">
                 <% for(var j = 0; j < sponsorData[i].sponsorItems.length; j++) { %>
-                <img class="others-img mx-4"
-                     data-toggle="modal"
-                     data-target="#sponsorModal"
-                     src="<%= sponsorData[i].sponsorItems[j].logoURL %>"
-                     alt=""
-                     srcset=""
-                >
+                    <div class="col-md-3 col-sm-6" data-toggle="modal"
+                    data-target="#sponsorModal">
+                        <img class="img-fluid"
+                        
+                        src="<%= sponsorData[i].sponsorItems[j].logoURL %>"
+                        alt=""
+                        srcset=""
+                   >
+                    </div>
+                
 
                 <!--Should to do independent into one component-->
 
@@ -152,7 +192,7 @@ engine: ejs
                                         <div class="d-flex flex-column mt-5">
                                             <h5><%= sponsorData[i].sponsorItems[j].name %></h5>
                                         </div>
-                                        <img class="my-3"
+                                        <img class="my-3 rounded-circle"
                                              src="<%= sponsorData[i].sponsorItems[j].logoURL %>"
                                              alt="" srcset=""
                                         >
@@ -172,10 +212,9 @@ engine: ejs
                 <!--Should to do independent into one component-->
 
                 <% } %>
+            </div>
                 <!--</div>-->
             </div>
             <% } %>
-        </div>
-    </div>
 </div>
 <%- include ./_partials/footer %>
