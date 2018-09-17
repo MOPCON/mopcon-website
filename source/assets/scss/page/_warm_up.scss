@@ -15,17 +15,18 @@
   }
 }
 
+.warm-up.banner-box{
+  background-image: url("../images/warm-up/visual.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center -65vh;
+}
 .warm-up{
   color:$c-white;
   .banner {
-    background-image: url("../images/warm-up/visual.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 -600px;
     padding-top: 200px;
     margin-bottom:7rem;
     width: 40%;
-    
     .logo {
       width: 381px;
       height: 260px;
@@ -190,10 +191,13 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 575px) {
+  .warm-up.banner-box {
+    background-size: 100%;
+    background-position: center -40vh;
+  }
   .warm-up{
     .banner{
-      background-position: 0 -120px;
-      padding-top: 100px;
+      padding-top: 150px;
       margin-bottom: 1rem;
       width: 60%;
       .logo,
@@ -284,7 +288,3 @@
 //    }
 //  }
 //}
-
-@media screen and (max-width: 320px) {
-
-}
