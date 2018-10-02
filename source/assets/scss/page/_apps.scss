@@ -1,0 +1,24 @@
+
+.apps{
+  h4,h5{
+    color:$c-dark-blue;
+     text-align: center;
+     font-weight: 600;
+  }
+  .ios,
+  .android,
+  .privacy {
+    background-color: $c-white;
+    border: solid 5px $c-light-blue;
+    border-radius: 3px;
+  }
+  .ios,.android{
+    width: 400px;
+    height: 400px;
+  }
+  .privacy{
+    p{
+      color:$c-dark-blue;
+    }
+  }
+}
