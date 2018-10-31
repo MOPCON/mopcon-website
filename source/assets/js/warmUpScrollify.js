@@ -2,6 +2,7 @@ $(function () {
     $.scrollify({
         section: ".panel",
         // sectionName: false,
+        setHeights: false,
         scrollSpeed: 1100,
         overflowScroll: true,
     });

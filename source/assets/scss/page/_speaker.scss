@@ -9,15 +9,15 @@
     height: 135px;
     clip-path: circle(50%);
   }
-  .speaker-btn{
-    background-color: $c-dark-blue;
-    border-radius: 10px;
-    color:$c-white;
-    padding-left:1.5rem;
-    padding-right:1.5rem;
-  }
+ 
 }
-  
+.speaker-btn{
+  background-color: $c-dark-blue;
+  border-radius: 10px;
+  color:$c-white;
+  padding-left:1.5rem;
+  padding-right:1.5rem;
+}
   .modal-dialog.speaker-modal {
     border-radius: 20px;
     border: solid 5px $c-light-blue;
