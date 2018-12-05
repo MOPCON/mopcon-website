@@ -1,0 +1,28 @@
+.album {
+    padding: 0 45px;
+}
+
+.album .box {
+    display: block;
+    border: 1px solid #fff;
+    
+}
+.album .box:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,73,94,0.3);
+}
+
+
+.album .topic {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
